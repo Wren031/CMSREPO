@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="180dp"
+    android:orientation="vertical"
+    android:elevation="10dp"
+    android:gravity="center_horizontal">
+
+    <RelativeLayout
+        android:id="@+id/_imageContainer"
+        android:background="@drawable/news_background"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:elevation="10dp">
+
+        <ImageView
+            android:background="@drawable/rounded_image"
+            android:id="@+id/_image"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:clipToOutline="true"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/baseline_personal_video_24"
+            android:layout_width="90dp"
+            android:layout_height="90dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_below="@+id/_imageContainer"
+        android:id="@+id/_title_id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textSize="12sp"
+        android:text="Senior Citizen Ayuda"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:breakStrategy="simple"/>
+
+</RelativeLayout>

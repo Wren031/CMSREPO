@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="90dp">
+
+    <LinearLayout
+        android:elevation="10dp"
+        android:background="@drawable/white_bg"
+        android:padding="10dp"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:src="@drawable/certificate"
+            android:id="@+id/_emergencyImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+
+        <RelativeLayout
+            android:layout_marginStart="-30dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/_emergencyName"
+                android:text="Pnp Police"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:id="@+id/_emergencyNumber"
+                android:text="+ 63123123213"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/_emergencyName"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

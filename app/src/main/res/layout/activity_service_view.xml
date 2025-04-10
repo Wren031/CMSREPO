@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C4C4C4">
+
+    <ImageView
+        android:src="@drawable/barangay_image"
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/white_bg"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Left Arrow Button -->
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/grey_bg"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_keyboard_arrow_left_24" />
+        </RelativeLayout>
+
+        <!-- Centered Breaking News Text -->
+        <TextView
+            android:text="All Service"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        <!-- Notification Button -->
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/grey_bg"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="0dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/baseline_notifications_none_24"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="10dp">
+
+            <!-- First News Button -->
+            <RelativeLayout
+                android:id="@+id/news_btn"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:background="@drawable/white_bg"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/certificate_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="50dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:text="BARANGAY CLEARANCE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <!-- Second Service Section -->
+            <RelativeLayout
+                android:id="@+id/service_btn"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:background="@drawable/white_bg"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/certificate_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="50dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:text="CERTIFICATE OF INDIGENCY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <!-- Request Section -->
+            <RelativeLayout
+                android:id="@+id/request_btn"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:background="@drawable/white_bg"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/certificate_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="50dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:text="CERTIFICATE OF RESIDENCY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <!-- Reservation Section -->
+            <RelativeLayout
+                android:id="@+id/reservation_btn"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:background="@drawable/white_bg"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/certificate_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="50dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:text="CERTIFICATION"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <!-- Emergency Section -->
+            <RelativeLayout
+                android:id="@+id/emergency_btn"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:background="@drawable/white_bg"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/certificate_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="50dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:text="ESTATE TAX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/blotter"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:background="@drawable/white_bg"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/certificate_icon"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"/>
+
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="50dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:text="BLOTTER"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include
+        layout="@layout/_layout_navigation_bar"
+        android:id="@+id/buttom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

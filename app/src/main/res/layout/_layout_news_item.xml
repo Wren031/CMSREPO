@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".ui.NewsView"
+    tools:ignore="UseCompoundDrawables">
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        android:elevation="10dp"
+        android:background="@drawable/news_background"
+        android:layout_width="350dp"
+        android:layout_height="200dp">
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:background="#D9D9D9"
+                android:id="@+id/_image"
+                android:layout_width="180dp"
+                android:layout_height="140dp">
+            </ImageView>
+
+            <TextView
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/_image"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="Learn More"
+                android:background="@color/black"
+                android:id="@+id/learnMore"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:elevation="4dp"
+            android:translationZ="2dp"
+            />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/_breakingContainer"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="BREAKING"
+                android:background="@color/black"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="NEWS"
+                android:background="#FF0000"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="-120dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/_text"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="0dp"
+                android:textColor="@android:color/black"
+                android:justificationMode="inter_word"
+                android:maxLines="10"
+                >
+
+            </TextView>
+
+            <TextView
+                android:layout_below="@+id/_text"
+                android:id="@+id/_date"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:text="March 1, 2025"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

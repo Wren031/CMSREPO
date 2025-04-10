@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#EBEBEB"
+    tools:context=".ui.DashboardView">
+
+    <ImageView
+        android:src="@drawable/barangay_image"
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:id="@+id/_topContanier"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/white_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_width="350dp"
+        android:layout_height="55dp">
+
+        <RelativeLayout
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/grey_bg"
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/arrow_back"
+                android:src="@drawable/baseline_keyboard_arrow_left_24"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="13sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Hello Wren Javier,"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/_verifyAccountBtn"
+                android:padding="0.2dp"
+                android:textSize="8sp"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:background="@drawable/login_btn_bg"
+                android:layout_marginTop="20dp"
+                android:text="Verify Account"
+                android:layout_width="100dp"
+                android:layout_height="15dp">
+
+            </TextView>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+
+            android:layout_marginStart="135dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/grey_bg"
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/baseline_notifications_none_24"
+                android:layout_width="30dp"
+                android:layout_height="30dp">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/_topContanier"
+        android:id="@+id/_newsItem"
+        android:layout_width="360dp"
+        android:layout_height="230dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/loading_container"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/_newsItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/loading1"
+            android:background="@drawable/grey_circle"
+            android:layout_width="15dp"
+            android:layout_height="15dp"/>
+
+        <TextView
+            android:id="@+id/loading2"
+            android:background="@drawable/light_grey_circle"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/loading3"
+            android:background="@drawable/light_grey_circle"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/loading4"
+            android:background="@drawable/light_grey_circle"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/loading_container"
+        android:id="@+id/textService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:textSize="15sp"
+            android:text="Service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginStart="270dp"
+            android:id="@+id/view_all"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:text="View all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@+id/textService"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/serive_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:gravity="center_vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginStart="20dp"
+                android:id="@+id/_serviceView"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginStart="20dp"
+                android:id="@+id/text_message"
+                android:layout_marginTop="1dp"
+                android:textSize="18sp"
+                android:text="How Can We Help You Today?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <include
+                android:layout_marginTop="20dp"
+                android:id="@+id/serviceBtn"
+                layout="@layout/_all_layout_service_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <include
+                layout="@layout/_layout_navigation_bar"
+                android:id="@+id/buttom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

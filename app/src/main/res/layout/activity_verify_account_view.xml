@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C4C4C4"
+    tools:context=".ui.VerifyAccountView">
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/white_bg"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Left Arrow Button -->
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/grey_bg"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_keyboard_arrow_left_24" />
+        </RelativeLayout>
+
+        <!-- Centered Breaking News Text -->
+        <TextView
+            android:text="Fill Information"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        <!-- Notification Button -->
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/grey_bg"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="0dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/baseline_notifications_none_24"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_below="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- First Name -->
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="First Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/first_name"
+                    android:layout_marginStart="20dp"
+                    android:hint="First Name"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:background="@drawable/white_bg" />
+
+            </LinearLayout>
+
+            <!-- Last Name -->
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Last Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/last_name"
+                    android:layout_marginStart="20dp"
+                    android:hint="Last Name"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:background="@drawable/white_bg" />
+            </LinearLayout>
+
+            <!-- Middle Name -->
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Middle Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/middle_name"
+                    android:layout_marginStart="5dp"
+                    android:hint="Middle Name"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:background="@drawable/white_bg" />
+            </LinearLayout>
+
+            <!-- Email -->
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/email_name"
+                    android:layout_marginStart="51dp"
+                    android:hint="Email"
+                    android:layout_width="20dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:background="@drawable/white_bg" />
+            </LinearLayout>
+
+            <!-- Phone -->
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/phone_number"
+                    android:layout_marginStart="45dp"
+                    android:hint="Phone"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:background="@drawable/white_bg" />
+            </LinearLayout>
+
+            <!-- Birthday -->
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Birthday" />
+
+                <EditText
+                    android:id="@+id/birthday"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="34dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_bg"
+                    android:hint="Birthday"
+                    android:padding="10dp"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Gender -->
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/gender"
+                    android:layout_marginStart="40dp"
+                    android:hint="Gender"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:background="@drawable/white_bg" />
+            </LinearLayout>
+
+            <!-- Citizenship -->
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Citizenship"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/citizenship"
+                    android:layout_marginStart="15dp"
+                    android:hint="Citizenship"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:background="@drawable/white_bg" />
+            </LinearLayout>
+
+            <!-- Religion -->
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Religion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/relegion"
+                    android:layout_marginStart="33dp"
+                    android:hint="Religion"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:background="@drawable/white_bg" />
+            </LinearLayout>
+
+            <!-- Weight -->
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/weight"
+                    android:layout_marginStart="39dp"
+                    android:hint="Weight"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:background="@drawable/white_bg" />
+            </LinearLayout>
+
+            <!-- Sector -->
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Sector"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/sector"
+                    android:layout_marginStart="40dp"
+                    android:hint="Sector"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:background="@drawable/white_bg" />
+            </LinearLayout>
+
+            <!-- House Blg -->
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="House Blg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/house_blg"
+                    android:layout_marginStart="16dp"
+                    android:hint="House Blg"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:background="@drawable/white_bg" />
+            </LinearLayout>
+
+            <!-- Height -->
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/height"
+                    android:layout_marginStart="38dp"
+                    android:hint="Height"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:background="@drawable/white_bg" />
+            </LinearLayout>
+
+            <!-- House Owner -->
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="House Owner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/house_owner"
+                    android:layout_marginStart="20dp"
+                    android:hint="House Owner"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:background="@drawable/white_bg" />
+            </LinearLayout>
+
+            <!-- House Material -->
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="House Material"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/house_material"
+                    android:layout_marginStart="8dp"
+                    android:hint="House Material"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:background="@drawable/white_bg" />
+            </LinearLayout>
+
+            <!-- Sitio -->
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Sitio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/setio"
+                    android:layout_marginStart="52dp"
+                    android:hint="Sitio"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:background="@drawable/white_bg" />
+            </LinearLayout>
+
+            <!-- Since Year -->
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Since Year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/since_year"
+                    android:layout_marginStart="12dp"
+                    android:hint="Since Year"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:background="@drawable/white_bg" />
+            </LinearLayout>
+
+            <!-- Family Head -->
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Family Head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/family_head"
+                    android:layout_marginStart="20dp"
+                    android:hint="Family Head"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:background="@drawable/white_bg" />
+            </LinearLayout>
+
+            <!-- Shelter Type -->
+            <LinearLayout
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Shelter Type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/shelter_type"
+                    android:layout_marginStart="20dp"
+                    android:hint="Shelter Type"
+                    android:layout_width="0dp"
+                    android:layout_height="43dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:background="@drawable/white_bg" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="30dp"
+                android:id="@+id/submit_btn"
+                android:background="@drawable/login_btn_bg"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:text="Submit"
+                android:layout_width="350dp"
+                android:layout_height="40dp">
+            </TextView>
+
+            <include
+                android:layout_marginBottom="20dp"
+                layout="@layout/_layout_navigation_bar"
+                android:id="@+id/buttom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

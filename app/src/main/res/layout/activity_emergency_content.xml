@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C4C4C4"
+    tools:context=".ui.EmergencyContent">
+
+    <ImageView
+        android:src="@drawable/barangay_image"
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/white_bg"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Left Arrow Button -->
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/grey_bg"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_keyboard_arrow_left_24" />
+        </RelativeLayout>
+
+        <!-- Centered Breaking News Text -->
+        <TextView
+            android:text="Emergency"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        <!-- Notification Button -->
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/grey_bg"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="0dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/baseline_notifications_none_24"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/name"
+        android:textColor="@color/black"
+        android:layout_marginTop="220dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="Name: Rescue"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:background="@drawable/white_bg"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:text="+ 639561352663"
+        android:layout_below="@+id/name"
+        android:layout_width="350dp"
+        android:layout_height="50dp">
+
+    </EditText>
+
+    <ImageView
+        android:layout_marginTop="80dp"
+        android:layout_below="@+id/name"
+        android:src="@drawable/call"
+        android:layout_centerHorizontal="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp">
+
+    </ImageView>
+
+
+    <include
+        android:layout_centerHorizontal="true"
+        layout="@layout/_layout_navigation_bar"
+        android:id="@+id/buttom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

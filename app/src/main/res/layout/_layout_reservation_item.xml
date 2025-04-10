@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="205dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:padding="20dp"
+            android:background="@drawable/white_bg"
+            android:layout_width="170dp"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/_gymImage"
+                android:layout_width="150dp"
+                android:layout_height="100dp">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/_gymName"
+                android:textStyle="bold"
+                android:layout_marginTop="100dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/_gymAvailability"
+                android:layout_marginTop="120dp"
+                android:textColor="@color/black"
+                android:text="Available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <ImageView
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="140dp"
+                android:src="@drawable/baseline_add_circle_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

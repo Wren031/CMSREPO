@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_centerHorizontal="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_marginStart="20dp"
+        android:id="@+id/service_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- News Button -->
+        <RelativeLayout
+            android:id="@+id/news_button"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/news"
+                android:background="@drawable/white_bg"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <ImageView
+                    android:src="@drawable/news"
+                    android:id="@+id/news_view"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_below="@id/news"
+                android:layout_marginTop="5dp"
+                android:text="News"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <!-- Services Button -->
+        <RelativeLayout
+            android:layout_marginStart="30dp"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/service"
+                android:background="@drawable/white_bg"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <ImageView
+                    android:id="@+id/service_view"
+                    android:src="@drawable/service"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_below="@id/service"
+                android:layout_marginTop="5dp"
+                android:text="Services"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <!-- Requests Button -->
+        <RelativeLayout
+            android:layout_marginStart="30dp"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/request"
+                android:background="@drawable/white_bg"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <ImageView
+                    android:id="@+id/request_view"
+                    android:src="@drawable/request"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_below="@id/request"
+                android:layout_marginTop="5dp"
+                android:text="Requests"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <!-- Reservation Button -->
+        <RelativeLayout
+            android:layout_marginStart="30dp"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/reservation"
+                android:background="@drawable/white_bg"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <ImageView
+                    android:id="@+id/reservation_view"
+                    android:src="@drawable/reservation"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_below="@+id/reservation"
+                android:layout_marginTop="5dp"
+                android:text="Reservation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- Second row of buttons -->
+    <LinearLayout
+        android:layout_marginStart="20dp"
+        android:id="@+id/service_id2"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/service_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Emergency Button -->
+        <RelativeLayout
+            android:elevation="20dp"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/emergency"
+                android:background="@drawable/white_bg"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <ImageView
+                    android:id="@+id/emergency_view"
+                    android:src="@drawable/emergency"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_below="@id/emergency"
+                android:layout_marginTop="5dp"
+                android:text="Emergency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <!-- History Button -->
+        <RelativeLayout
+            android:layout_marginStart="30dp"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/history"
+                android:background="@drawable/white_bg"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <ImageView
+                    android:id="@+id/history_view"
+                    android:src="@drawable/history"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_below="@id/history"
+                android:layout_marginTop="5dp"
+                android:text="History"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <!-- Barangay Official Button -->
+        <RelativeLayout
+            android:layout_marginStart="30dp"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/barangay"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/white_bg"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <ImageView
+                    android:id="@+id/barangayOfficial_view"
+                    android:src="@drawable/official"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_below="@id/barangay"
+                android:layout_marginTop="5dp"
+                android:text="Barangay Official"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <!-- Family Member Button -->
+        <RelativeLayout
+            android:layout_marginStart="30dp"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:id="@+id/family"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/white_bg"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <ImageView
+                    android:id="@+id/family_view"
+                    android:src="@drawable/family"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_below="@id/family"
+                android:layout_marginTop="5dp"
+                android:text="Family Member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

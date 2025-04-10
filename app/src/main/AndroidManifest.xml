@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CommunityManangementSystem"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.OfficialView"
+            android:exported="false" />
+        <activity
+            android:name=".ui.EmergencyContent"
+            android:exported="false" />
+        <activity
+            android:name=".ui.HistoryView"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ReservationContent"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ReservationView"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ReservationRequest"
+            android:exported="false" />
+        <activity
+            android:name=".ui.DashboardView"
+            android:exported="false" />
+        <activity
+            android:name=".ui.RequestView"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ServiceView"
+            android:exported="false" />
+        <activity
+            android:name=".ui.VerifyAccountView"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MessageContent"
+            android:exported="false" />
+        <activity
+            android:name=".ui.NewsViewContent"
+            android:exported="false" />
+        <activity
+            android:name=".ui.LoginView"
+            android:exported="false" />
+        <activity
+            android:name=".ui.NewsView"
+            android:exported="false" />
+        <activity
+            android:name=".ui.MessageView"
+            android:exported="false" />
+        <activity
+            android:name=".ui.WelcomeView"
+            android:exported="false" />
+        <activity
+            android:name=".ui.EmergencyView"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

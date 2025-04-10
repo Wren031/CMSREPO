@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/_residentMessageID"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:background="@drawable/login_btn_bg"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:text="Hello Dear, How are you"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/_residentMessageID"
+        android:id="@+id/_residentSentID"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:background="@drawable/register_btn"
+        android:layout_marginTop="20dp"
+        android:text="Im fine"
+        android:layout_marginEnd="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+</RelativeLayout>

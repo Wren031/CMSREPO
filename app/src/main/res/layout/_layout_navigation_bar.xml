@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/navbar_bg"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        tools:ignore="UselessParent">
+
+        <!-- Home Button -->
+        <RelativeLayout
+            android:id="@+id/home_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <!-- Line above icon -->
+            <TextView
+                android:id="@+id/home_btn_line"
+                android:layout_width="50dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:id="@+id/home_btn_image"
+                android:src="@drawable/baseline_home_filled_24"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/home_btn_line"/>
+
+            <TextView
+                android:id="@+id/text_home"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"
+                android:text="Home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/home_btn_image"/>
+
+        </RelativeLayout>
+
+        <!-- Notification Button -->
+        <RelativeLayout
+            android:id="@+id/notification_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <!-- Line above icon -->
+            <TextView
+                android:id="@+id/notification_btn_line"
+                android:layout_width="50dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white"/>
+
+            <ImageView
+                android:id="@+id/_messageBtn"
+                android:src="@drawable/baseline_message_24"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/notification_btn_line"/>
+
+            <TextView
+                android:id="@+id/text_notification"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"
+                android:text="Message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/_messageBtn"/>
+
+        </RelativeLayout>
+
+        <!-- Settings Button -->
+        <RelativeLayout
+            android:id="@+id/settings_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <!-- Line above icon -->
+            <TextView
+                android:id="@+id/settings_btn_line"
+                android:layout_width="50dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white"/>
+
+            <ImageView
+                android:id="@+id/settings_btn_image"
+                android:src="@drawable/baseline_settings_24"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/settings_btn_line"/>
+
+            <TextView
+                android:id="@+id/text_settings"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"
+                android:text="Settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/settings_btn_image"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/profile_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/profile_btn_line"
+                android:layout_width="50dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/white"/>
+
+            <ImageView
+                android:id="@+id/profile_btn_image"
+                android:src="@drawable/baseline_person_24"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/profile_btn_line"/>
+
+            <TextView
+                android:id="@+id/text_profile"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"
+                android:text="Profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/profile_btn_image"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
