@@ -1,5 +1,7 @@
 package com.example.communitymanangementsystem.ui;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -24,6 +26,7 @@ public class MessageView extends AppCompatActivity implements ChatListener {
     private MessageAdapter adapter;
 
     private NavbarListener navbarListener;
+    private Context context;
 
 
     @Override
@@ -34,7 +37,7 @@ public class MessageView extends AppCompatActivity implements ChatListener {
 
         model = new ArrayList<>();
 
-        adapter = new MessageAdapter(model,(ChatListener) this);
+        adapter = new MessageAdapter(model,(ChatListener) this, this);
 
         view = findViewById(R.id._messageItem);
 
@@ -105,6 +108,9 @@ public class MessageView extends AppCompatActivity implements ChatListener {
 
     @Override
     public void onChatListener(MessageViewModel message) {
-        System.out.println("you click the messege: "+message.getMessage());
+        Intent intent = new Intent(context, MessageContent.class);
+        context.startActivity(intent);
     }
+
+
 }

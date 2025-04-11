@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import com.example.communitymanangementsystem.R;
 import com.example.communitymanangementsystem.ui.DashboardView;
 import com.example.communitymanangementsystem.ui.MessageView;
+import com.example.communitymanangementsystem.ui.ProfileView;
 
 public class NavbarListener {
 
@@ -20,16 +21,18 @@ public class NavbarListener {
         message = activity.findViewById(R.id._messageBtn);
         settings = activity.findViewById(R.id.settings_btn_image);
         profile = activity.findViewById(R.id.profile_btn_image);
-
         setListeners();
     }
 
     private void setListeners() {
+        profile.setOnClickListener(v ->{
+            Intent i = new Intent(activity, ProfileView.class);
+            activity.startActivity(i);
+        });
         home.setOnClickListener(v -> {
             Intent i = new Intent(activity, DashboardView.class);
             activity.startActivity(i);
         });
-
         message.setOnClickListener(v -> {
             Intent i = new Intent(activity, MessageView.class);
             activity.startActivity(i);

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/_residentMessageID"
+        android:id="@+id/_sentToID"
         android:padding="10dp"
         android:textColor="@color/white"
         android:background="@drawable/login_btn_bg"
@@ -17,8 +17,8 @@
 
     <TextView
         android:layout_alignParentEnd="true"
-        android:layout_below="@+id/_residentMessageID"
-        android:id="@+id/_residentSentID"
+        android:layout_below="@+id/_sentToID"
+        android:id="@+id/_sentByID"
         android:padding="10dp"
         android:textColor="@color/black"
         android:background="@drawable/register_btn"

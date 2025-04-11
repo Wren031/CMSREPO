@@ -13,7 +13,13 @@
         android:theme="@style/Theme.CommunityManangementSystem"
         tools:targetApi="31">
         <activity
+            android:name=".ui.FamilyMemberView"
+            android:exported="false" />
+        <activity
             android:name=".ui.OfficialView"
+            android:exported="false" />
+        <activity
+            android:name=".ui.EmergencyView"
             android:exported="false" />
         <activity
             android:name=".ui.EmergencyContent"
@@ -31,7 +37,7 @@
             android:name=".ui.ReservationRequest"
             android:exported="false" />
         <activity
-            android:name=".ui.DashboardView"
+            android:name=".ui.ProfileView"
             android:exported="false" />
         <activity
             android:name=".ui.RequestView"
@@ -44,7 +50,8 @@
             android:exported="false" />
         <activity
             android:name=".ui.MessageContent"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".ui.NewsViewContent"
             android:exported="false" />
@@ -61,10 +68,11 @@
             android:name=".ui.WelcomeView"
             android:exported="false" />
         <activity
-            android:name=".ui.EmergencyView"
+            android:name=".ui.DashboardView"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

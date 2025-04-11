@@ -1,5 +1,7 @@
 package com.example.communitymanangementsystem.Adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,18 +14,21 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.communitymanangementsystem.R;
 import com.example.communitymanangementsystem.model.MessageViewModel;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.ButtonListener.ChatListener;
+import com.example.communitymanangementsystem.ui.EmergencyContent;
+import com.example.communitymanangementsystem.ui.MessageContent;
 
 import java.util.List;
 
 public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHolder> {
     private List<MessageViewModel> data;
     private ChatListener listener;
+    private Context context;
 
-    public MessageAdapter(List<MessageViewModel> data, ChatListener listener){
+    public MessageAdapter(List<MessageViewModel> data, ChatListener listener, Context context){
         this.data = data;
         this.listener = listener;
+        this.context = context;
     }
-
 
     @NonNull
     @Override
@@ -40,9 +45,8 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
         holder.time.setText(model.getTime());
         holder.message.setText(model.getMessage());
         holder.itemView.setOnClickListener( v -> {
-            if(this.listener != null){
-                this.listener.onChatListener(data.get(position));
-            }
+            Intent intent = new Intent(context, MessageContent.class);
+            context.startActivity(intent);
         });
     }
 

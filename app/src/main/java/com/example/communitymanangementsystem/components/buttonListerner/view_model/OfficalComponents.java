@@ -59,6 +59,41 @@ public class OfficalComponents {
                     "May, 5, 2018",
                     "Feb 1, 2025"
             ));
+            newList.add(new OfficialViewModel(
+                    2,
+                    resident,
+                    "SK, Kagawad",
+                    "May, 5, 2018",
+                    "Feb 1, 2025"
+            ));
+            newList.add(new OfficialViewModel(
+                    3,
+                    resident,
+                    "SK, Kagawad",
+                    "May, 5, 2018",
+                    "Feb 1, 2025"
+            ));
+            newList.add(new OfficialViewModel(
+                    4,
+                    resident,
+                    "SK, Kagawad",
+                    "May, 5, 2018",
+                    "Feb 1, 2025"
+            ));
+            newList.add(new OfficialViewModel(
+                    5,
+                    resident,
+                    "SK, Kagawad",
+                    "May, 5, 2018",
+                    "Feb 1, 2025"
+            ));
+            newList.add(new OfficialViewModel(
+                    6,
+                    resident,
+                    "SK, Kagawad",
+                    "May, 5, 2018",
+                    "Feb 1, 2025"
+            ));
         }
         return newList;
     }

@@ -6,8 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.communitymanangementsystem.R;
@@ -35,6 +37,21 @@ public class OfficialAdapter extends RecyclerView.Adapter<OfficialAdapter.Offcia
         holder.name.setText(model.getResidents().getFullName());
         holder.possition.setText(model.getPossition());
         holder.age.setText(model.getResidents().getAge());
+        holder.btn.setOnClickListener(v -> {
+            new AlertDialog.Builder(holder.itemView.getContext())
+                    .setTitle("Hello " + model.getResidents().getFullName())
+                    .setMessage("You clicked the button. Do you want to continue?")
+                    .setPositiveButton("Yes", (dialog, which) -> {
+                        // Do something when user clicks Yes
+                        Toast.makeText(holder.itemView.getContext(), "You clicked Yes!", Toast.LENGTH_SHORT).show();
+                    })
+                    .setNegativeButton("No", (dialog, which) -> {
+                        // Do something when user clicks No
+                        dialog.dismiss();
+                    })
+                    .show();
+        });
+
     }
 
     @Override
@@ -55,7 +72,7 @@ public class OfficialAdapter extends RecyclerView.Adapter<OfficialAdapter.Offcia
             this.possition = itemView.findViewById(R.id._namePossition);
             this.image = itemView.findViewById(R.id._imageOfficial);
             this.status = itemView.findViewById(R.id._status_iconOfficial);
-            this.age = itemView.findViewById(R.id._ageOfficial);
+            this.age = itemView.findViewById(R.id._age_valueOfficial);
             this.btn = itemView.findViewById(R.id._viewBntOfficial);
         }
     }

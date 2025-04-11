@@ -7,8 +7,10 @@ import android.widget.TextView;
 
 import com.example.communitymanangementsystem.R;
 import com.example.communitymanangementsystem.ui.EmergencyView;
+import com.example.communitymanangementsystem.ui.FamilyMemberView;
 import com.example.communitymanangementsystem.ui.HistoryView;
 import com.example.communitymanangementsystem.ui.NewsView;
+import com.example.communitymanangementsystem.ui.OfficialView;
 import com.example.communitymanangementsystem.ui.RequestView;
 import com.example.communitymanangementsystem.ui.ReservationRequest;
 import com.example.communitymanangementsystem.ui.ReservationView;
@@ -19,23 +21,32 @@ public class ServiceListener {
     private Activity activity;
     private TextView serviceView, verifyText;
 
-    private ImageView newsViewBtn, servicesBtn, requestBtn, reservationBtn, historyBtn, emergenyBtn;
+    private ImageView newsViewBtn, servicesBtn, requestBtn, reservationBtn, historyBtn, emergenyBtn, officalBtn, familyBtn;
 
     public ServiceListener(Activity activity){
         this.activity = activity;
         this.serviceView = activity.findViewById(R.id.view_all);
         this.verifyText = activity.findViewById(R.id._verifyAccountBtn);
-
         this.newsViewBtn = activity.findViewById(R.id.news_view);
         this.servicesBtn = activity.findViewById(R.id.service_view);
         this.requestBtn = activity.findViewById(R.id.request_view);
         this.reservationBtn = activity.findViewById(R.id.reservation_view);
         this.historyBtn = activity.findViewById(R.id.history_view);
         this.emergenyBtn = activity.findViewById(R.id.emergency_view);
+        this.officalBtn = activity.findViewById(R.id.barangayOfficial_view);
+        this.familyBtn = activity.findViewById(R.id.family_view);
         setListeners();
     }
 
     private void setListeners() {
+        familyBtn.setOnClickListener(v ->{
+            Intent i = new Intent(activity, FamilyMemberView.class);
+            activity.startActivity(i);
+        });
+        officalBtn.setOnClickListener(v ->{
+            Intent i = new Intent(activity, OfficialView.class);
+            activity.startActivity(i);
+        });
         emergenyBtn.setOnClickListener(v ->{
             Intent i = new Intent(activity, EmergencyView.class);
             activity.startActivity(i);
