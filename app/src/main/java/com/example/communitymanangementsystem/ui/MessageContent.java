@@ -17,8 +17,11 @@ import com.example.communitymanangementsystem.components.buttonListerner.view_mo
 import com.example.communitymanangementsystem.model.ChatViewModel;
 import com.example.communitymanangementsystem.model.ResidentsViewModel;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class MessageContent extends AppCompatActivity {
 
@@ -52,29 +55,29 @@ public class MessageContent extends AppCompatActivity {
         recyclerView.setAdapter(chatAdapter);
         loadMessage();
 
-        // Setup send button listener
-//        sendButton.setOnClickListener(v -> sentMessage());
+        sendButton.setOnClickListener(v -> sentMessage());
     }
 
     public void loadMessage() {
 
         ResidentsComponents residentsComponents = new ResidentsComponents(new ArrayList<>());
         List<ResidentsViewModel> residents = residentsComponents.getResidents();
+
         if (residents != null && !residents.isEmpty()) {
             for (ResidentsViewModel resident : residents) {
                 chatList.add(new ChatViewModel(
-                        1,
+                        2,
                         resident,
                         resident,
                         "Jan 31, 2002",
-                        "Im fine"
+                        "Hello there, how are you?"
                 ));
                 chatList.add(new ChatViewModel(
                         1,
                         resident,
                         resident,
                         "Jan 31, 2002",
-                        "Hello there, how are you?"
+                        "Im fine"
                 ));
             }
         } else {
@@ -83,20 +86,28 @@ public class MessageContent extends AppCompatActivity {
         chatAdapter.notifyDataSetChanged();
     }
 
-//    public void sentMessage() {
-//        String messageText = inputBox.getText().toString().trim();
-//        if (!messageText.isEmpty()) {
-//            // Create and add new message to the chat list
-//            ChatViewModel newMessage = new ChatViewModel(
-//                    1,  // You can replace with actual sender's data
-//                    new ResidentsViewModel("Sender"),  // Replace with actual sender data
-//                    new ResidentsViewModel("Receiver"),  // Replace with actual receiver data
-//                    "Now",  // Current timestamp
-//                    messageText
-//            );
-//            chatList.add(newMessage);
-//            chatAdapter.notifyItemInserted(chatList.size() - 1);
-//            inputBox.setText("");  // Clear the input box after sending the message
-//        }
-//    }
+    public void sentMessage() {
+        ResidentsComponents residentsComponents = new ResidentsComponents(new ArrayList<>());
+        List<ResidentsViewModel> residents = residentsComponents.getResidents();
+
+        String messageText = inputBox.getText().toString().trim();
+        if (!messageText.isEmpty()) {
+            ResidentsViewModel sender = residents.get(0);
+
+            String currentTime = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(new Date());
+
+            ChatViewModel newMessage = new ChatViewModel(
+                    1,
+                    sender,
+                    sender,
+                    currentTime,
+                    messageText
+            );
+
+            chatList.add(newMessage);
+            chatAdapter.notifyItemInserted(chatList.size() - 1);
+            inputBox.setText("");
+        }
+    }
+
 }

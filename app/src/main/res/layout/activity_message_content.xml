@@ -73,6 +73,8 @@
 
     <!-- Bottom Bar: Input and Send Button -->
     <LinearLayout
+
+        android:fitsSystemWindows="true"
         android:focusableInTouchMode="true"
         android:background="#EEEEEE"
         android:elevation="10dp"

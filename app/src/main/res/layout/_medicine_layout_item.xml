@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="190dp"
+    android:layout_height="220dp">
+
+    <RelativeLayout
+        android:elevation="10dp"
+        android:background="@drawable/white_bg"
+        android:layout_width="180dp"
+        android:layout_height="210dp">
+
+        <ImageView
+            android:padding="10dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/baseline_favorite_border_24"
+            android:id="@+id/_addTofavoraite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ImageView>
+
+        <ImageView
+            android:layout_below="@+id/_addTofavoraite"
+            android:id="@+id/_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/amoxicillin"
+            android:scaleType="centerCrop"
+            android:clipToOutline="true"
+            android:background="@drawable/circle_image"
+            android:elevation="10dp"/>
+
+        <TextView
+            android:id="@+id/_medcineName"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_below="@+id/_image"
+            android:text="Amoxicillin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/_stock"
+            android:textStyle="bold"
+            android:textColor="#1877F2"
+            android:textSize="15sp"
+            android:layout_marginStart="20dp"
+            android:text="x 10"
+            android:layout_below="@+id/_medcineName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/_image"
+            android:padding="10dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/baseline_add_box_24"
+            android:id="@+id/_addIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

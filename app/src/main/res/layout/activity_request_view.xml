@@ -101,7 +101,7 @@
 
             <!-- First News Button -->
             <RelativeLayout
-                android:id="@+id/news_btn"
+                android:id="@+id/_request_medicine"
                 android:layout_width="350dp"
                 android:layout_height="60dp"
                 android:background="@drawable/white_bg"

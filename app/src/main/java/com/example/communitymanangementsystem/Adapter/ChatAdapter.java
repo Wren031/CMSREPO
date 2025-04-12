@@ -13,45 +13,82 @@ import com.example.communitymanangementsystem.model.ChatViewModel;
 
 import java.util.List;
 
-public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ChatViewHolder> {
+public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private List<ChatViewModel> modelList;
+
+    private static final int VIEW_TYPE_RIGHT = 1;
+    private static final int VIEW_TYPE_LEFT = 2;
 
     public ChatAdapter(List<ChatViewModel> modelList) {
         this.modelList = modelList;
     }
 
+    @Override
+    public int getItemViewType(int position) {
+        ChatViewModel chat = modelList.get(position);
+        if (chat.getChatID() == 1) {
+            return VIEW_TYPE_RIGHT;
+        } else {
+            return VIEW_TYPE_LEFT;
+        }
+    }
+
     @NonNull
     @Override
-    public ChatAdapter.ChatViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout._layout_message_content_item, parent, false);
-        return new ChatViewHolder(view);
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        if (viewType == VIEW_TYPE_RIGHT) {
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_chat_right, parent, false);
+            return new RightViewHolder(view);
+        } else {
+            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_chat_left, parent, false);
+            return new LeftViewHolder(view);
+        }
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ChatAdapter.ChatViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         ChatViewModel chat = modelList.get(position);
-//        holder.message.setText(chat.getMessageSent());
-        holder.sentBy.setText(chat.getSentBy().getFullName());
-        holder.sentTo.setText(chat.getSentTo().getFullName());
+        if (holder instanceof RightViewHolder) {
+            ((RightViewHolder) holder).bind(chat);
+        } else if (holder instanceof LeftViewHolder) {
+            ((LeftViewHolder) holder).bind(chat);
+        }
     }
 
     @Override
     public int getItemCount() {
-        return (modelList != null) ? modelList.size() : 0;
+        return modelList.size();
     }
 
-    public static class ChatViewHolder extends RecyclerView.ViewHolder {
-        TextView sentBy;
-        TextView sentTo;
-        TextView message;
+    public static class RightViewHolder extends RecyclerView.ViewHolder {
+        TextView textMessage, time;
 
-        public ChatViewHolder(@NonNull View itemView) {
+
+        public RightViewHolder(@NonNull View itemView) {
             super(itemView);
-            sentBy = itemView.findViewById(R.id._sentByID);
-            sentTo = itemView.findViewById(R.id._sentToID);
-            message = itemView.findViewById(R.id._inputBox);
+            textMessage = itemView.findViewById(R.id.text_message_right);
+            time = itemView.findViewById(R.id._dateTime);
+        }
+
+        public void bind(ChatViewModel chat) {
+            textMessage.setText(chat.getMessageSent());
+            time.setText(chat.getDateTime());
+        }
+    }
+
+    public static class LeftViewHolder extends RecyclerView.ViewHolder {
+        TextView textMessage, time;
+
+        public LeftViewHolder(@NonNull View itemView) {
+            super(itemView);
+            textMessage = itemView.findViewById(R.id.text_message_left);
+            time = itemView.findViewById(R.id._dateTime);
+        }
+
+        public void bind(ChatViewModel chat) {
+            textMessage.setText(chat.getMessageSent());
+            time.setText(chat.getDateTime());
         }
     }
 }
