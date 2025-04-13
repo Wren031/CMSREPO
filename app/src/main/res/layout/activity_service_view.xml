@@ -65,8 +65,75 @@
 
     </LinearLayout>
 
-    <ScrollView
+
+    <RelativeLayout
+        android:elevation="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/white_bg"
         android:layout_below="@+id/top"
+        android:id="@+id/container"
+        android:layout_width="350dp"
+        android:layout_height="200dp">
+
+        <TextView
+            android:layout_marginStart="12dp"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:text="SMART BARANGAY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+
+            android:layout_marginTop="25dp"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:textSize="12sp"
+            android:text="    The Barangay Information System\n
+    is design to automate and\n
+    improve the entire operations of\n
+    the brangay."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_marginStart="20dp"
+            android:background="#D9D9D9"
+            android:layout_marginTop="150dp"
+            android:layout_width="200dp"
+            android:layout_height="2dp">
+
+        </LinearLayout>
+
+        <TextView
+            android:text="CHOOSE FROM ANY OF THE SERVICE"
+            android:layout_marginTop="170dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <ImageView
+            android:layout_marginTop="29dp"
+            android:layout_marginStart="220dp"
+            android:src="@drawable/certificate"
+            android:layout_width="150dp"
+            android:layout_height="150dp">
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"
@@ -77,11 +144,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center_horizontal"
-            android:padding="10dp">
+            android:padding="5dp">
 
             <!-- First News Button -->
             <RelativeLayout
-                android:id="@+id/news_btn"
+                android:id="@+id/clearance"
                 android:layout_width="350dp"
                 android:layout_height="60dp"
                 android:background="@drawable/white_bg"

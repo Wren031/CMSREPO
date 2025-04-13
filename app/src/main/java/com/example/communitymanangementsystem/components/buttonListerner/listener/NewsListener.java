@@ -2,11 +2,10 @@ package com.example.communitymanangementsystem.components.buttonListerner.listen
 
 import android.app.Activity;
 import android.content.Intent;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.communitymanangementsystem.R;
-import com.example.communitymanangementsystem.ui.NewsView;
+import com.example.communitymanangementsystem.ui.content.news.NewsView;
 
 public class NewsListener {
 

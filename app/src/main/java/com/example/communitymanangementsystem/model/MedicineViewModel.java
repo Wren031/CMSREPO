@@ -1,6 +1,6 @@
 package com.example.communitymanangementsystem.model;
 
-import com.example.communitymanangementsystem.model.category_view_model.MedicineCategoryViewModel;
+import com.example.communitymanangementsystem.model.category_model.MedicineCategoryViewModel;
 
 public class MedicineViewModel {
     int medicineId;

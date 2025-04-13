@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.content.medicine.MedicineContent"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C4C4C4">
+
+    <ImageView
+
+        android:src="@drawable/med"
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/white_bg"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Left Arrow Button -->
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/grey_bg"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_keyboard_arrow_left_24" />
+        </RelativeLayout>
+
+        <!-- Centered Breaking News Text -->
+        <TextView
+            android:text="Medicine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        <!-- Notification Button -->
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/grey_bg"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="0dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/baseline_notifications_none_24"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:id="@+id/_imageContainer"
+        android:elevation="10dp"
+        android:background="@drawable/white_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/top"
+        android:layout_width="350dp"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/_medImage"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/amoxicillin"
+            android:layout_width="150dp"
+            android:layout_height="150dp">
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/_medContainer"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/_imageContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/_medName"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:text="Biogesec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:id="@+id/_medStock"
+            android:layout_below="@+id/_medName"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:text="x 20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:id="@+id/_text"
+            android:textSize="18sp"
+            android:text="Description"
+            android:layout_below="@+id/_medStock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/_medDescription"
+            android:layout_below="@+id/_text"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:text="This medicine is Good for...."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:elevation="10dp"
+        android:id="@+id/_quantityContainer"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/white_bg"
+        android:layout_below="@+id/_medContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:text="QUANTITY"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+
+            android:padding="15dp"
+            android:layout_width="230dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/_minusQty"
+            android:textColor="@color/black"
+            android:text="-"
+            android:textSize="20sp"
+            android:background="#D9D9D9"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:id="@+id/_medQty"
+            android:text="x 2"
+            android:textSize="14sp"
+            android:background="@drawable/white_bg"
+            android:gravity="center"
+            android:layout_marginStart="2dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/_addQty"
+            android:background="#D9D9D9"
+            android:textColor="@color/black"
+            android:text="+"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginStart="2dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:elevation="10dp"
+        android:layout_marginEnd="26dp"
+        android:layout_below="@+id/_quantityContainer"
+        android:id="@+id/_submitMedReq"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/white"
+        android:background="@drawable/login_btn_bg"
+        android:text="Submit"
+        android:layout_width="100dp"
+        android:layout_height="40dp">
+
+    </TextView>
+
+
+
+    <include
+        layout="@layout/_layout_navigation_bar"
+        android:id="@+id/buttom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

@@ -14,8 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.communitymanangementsystem.R;
 import com.example.communitymanangementsystem.model.MessageViewModel;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.ButtonListener.ChatListener;
-import com.example.communitymanangementsystem.ui.EmergencyContent;
-import com.example.communitymanangementsystem.ui.MessageContent;
+import com.example.communitymanangementsystem.ui.content.message.MessageContent;
 
 import java.util.List;
 

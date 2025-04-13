@@ -10,7 +10,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.communitymanangementsystem.R;
-import com.example.communitymanangementsystem.controller.AuthenticationController;
+import com.example.communitymanangementsystem.components.buttonListerner.view_model.AuthenticationController;
 import com.example.communitymanangementsystem.model.AuthenticationViewModel;
 import com.example.communitymanangementsystem.model.ResidentsViewModel;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.AlertListener;

@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.communitymanangementsystem.R;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.NavbarListener;
-import com.example.communitymanangementsystem.components.buttonListerner.view_model.OfficalComponents;
+import com.example.communitymanangementsystem.components.buttonListerner.view_model.OfficalController;
 import com.example.communitymanangementsystem.model.OfficialViewModel;
 
 
@@ -21,7 +21,7 @@ public class OfficialView extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_official_view);
         navbarListener = new NavbarListener(this);
-        OfficalComponents components = new OfficalComponents(this, findViewById(R.id._officialItem));
+        OfficalController components = new OfficalController(this, findViewById(R.id._officialItem));
         List<OfficialViewModel> model = components.officialList();
         components.updateOfficialList(model);
 

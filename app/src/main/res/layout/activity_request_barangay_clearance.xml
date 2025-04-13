@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C4C4C4"
+    tools:context=".ui.content.services.RequestBarangayClearance">
+
+    <ImageView
+        android:src="@drawable/barangay_image"
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/white_bg"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Left Arrow Button -->
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/grey_bg"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_keyboard_arrow_left_24" />
+        </RelativeLayout>
+
+        <!-- Centered Breaking News Text -->
+        <TextView
+            android:text="Certificate Request"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        <!-- Notification Button -->
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/grey_bg"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="0dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/baseline_notifications_none_24"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:elevation="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:layout_below="@+id/top"
+        android:id="@+id/container"
+        android:layout_width="350dp"
+        android:layout_height="200dp">
+
+        <TextView
+            android:layout_marginStart="12dp"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:text="SMART BARANGAY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+
+            android:layout_marginTop="25dp"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:textSize="12sp"
+            android:text="    The Barangay Information System\n
+    is design to automate and\n
+    improve the entire operations of\n
+    the brangay."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_marginStart="20dp"
+            android:background="#D9D9D9"
+            android:layout_marginTop="150dp"
+            android:layout_width="200dp"
+            android:layout_height="2dp">
+
+        </LinearLayout>
+
+        <TextView
+            android:text="CERTIFICATE / CLEARANCE"
+            android:layout_marginTop="170dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <ImageView
+            android:layout_marginTop="29dp"
+            android:layout_marginStart="220dp"
+            android:src="@drawable/certificate"
+            android:layout_width="150dp"
+            android:layout_height="150dp">
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:id="@+id/_amount"
+        android:layout_below="@+id/container"
+        android:text="Amount: P 0.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+
+    <Spinner
+        android:elevation="10dp"
+        android:id="@+id/purpose_id"
+        android:textSize="15sp"
+        android:padding="10dp"
+        android:background="@drawable/white_bg"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/_amount"
+        android:layout_width="350dp"
+        android:layout_height="50dp">
+    </Spinner>
+
+    <EditText
+        android:elevation="10dp"
+        android:id="@+id/_pickUpdate"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Select Date"
+        android:layout_below="@+id/purpose_id"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:inputType="date"
+        android:background="@drawable/white_bg"
+        android:padding="10dp"
+        android:textSize="15sp"/>
+
+    <EditText
+        android:elevation="10dp"
+        android:id="@+id/_referenceNo"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Reference No"
+        android:layout_below="@+id/_pickUpdate"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/white_bg"
+        android:padding="10dp"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="30dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:id="@+id/gcashNumber"
+        android:layout_below="@+id/_referenceNo"
+        android:text="Gcash No: +63909120512"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/_submit"
+        android:layout_marginTop="270dp"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:text="Submit"
+        android:background="@drawable/login_btn_bg"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/_pickUpdate"
+        android:layout_width="350dp"
+        android:layout_height="50dp">
+
+    </TextView>
+
+
+    <include
+        android:fitsSystemWindows="true"
+        layout="@layout/_layout_navigation_bar"
+        android:id="@+id/buttom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

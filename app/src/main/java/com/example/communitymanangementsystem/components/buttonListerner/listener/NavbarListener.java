@@ -6,7 +6,7 @@ import android.widget.ImageView;
 
 import com.example.communitymanangementsystem.R;
 import com.example.communitymanangementsystem.ui.DashboardView;
-import com.example.communitymanangementsystem.ui.MessageView;
+import com.example.communitymanangementsystem.ui.content.message.MessageView;
 import com.example.communitymanangementsystem.ui.ProfileView;
 
 public class NavbarListener {

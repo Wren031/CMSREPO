@@ -8,9 +8,9 @@ import com.example.communitymanangementsystem.R;
 import com.example.communitymanangementsystem.model.NewsViewModel;
 import com.example.communitymanangementsystem.model.ServiceViewModel;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.NavbarListener;
-import com.example.communitymanangementsystem.components.buttonListerner.view_model.NewsComponents;
+import com.example.communitymanangementsystem.components.buttonListerner.view_model.NewsController;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.NewsListener;
-import com.example.communitymanangementsystem.components.buttonListerner.view_model.ServiceComponents;
+import com.example.communitymanangementsystem.components.buttonListerner.view_model.ServiceController;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.ServiceListener;
 
 import java.util.List;
@@ -27,17 +27,17 @@ public class DashboardView extends AppCompatActivity{
         EdgeToEdge.enable(this);
         setContentView(R.layout.dashboard_view);
 
-        navbarListener = new NavbarListener(this);
+        this.navbarListener = new NavbarListener(this);
 
         serviceListener = new ServiceListener(this);
 
         // display service data
-        ServiceComponents serviceComponents = new ServiceComponents(this, findViewById(R.id._serviceView));
+        ServiceController serviceComponents = new ServiceController(this, findViewById(R.id._serviceView));
         List<ServiceViewModel> newServices = serviceComponents.fetchNewServiceList();
         serviceComponents.updateServiceList(newServices);
 
         // display news data
-        NewsComponents newsComponents = new NewsComponents(this, findViewById(R.id._newsItem));
+        NewsController newsComponents = new NewsController(this, findViewById(R.id._newsItem));
         List<NewsViewModel> newNews = newsComponents.fetchNewNewsList();
         newsComponents.updateNewsList(newNews);
 

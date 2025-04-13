@@ -9,9 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.communitymanangementsystem.R;
-import com.example.communitymanangementsystem.model.category_view_model.MedicineCategoryViewModel;
-
-import org.w3c.dom.Text;
+import com.example.communitymanangementsystem.model.category_model.MedicineCategoryViewModel;
 
 import java.util.List;
 

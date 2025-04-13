@@ -13,7 +13,19 @@
         android:theme="@style/Theme.CommunityManangementSystem"
         tools:targetApi="31">
         <activity
-            android:name=".ui.DashboardView"
+            android:name=".ui.content.medicine.MedicineContent"
+            android:exported="false" />
+        <activity
+            android:name=".ui.content.sports.SportsContent"
+            android:exported="false" />
+        <activity
+            android:name=".ui.content.sports.RequestSports"
+            android:exported="false" />
+        <activity
+            android:name=".ui.content.history.HistoryView"
+            android:exported="false" />
+        <activity
+            android:name=".ui.LoginView"
             android:exported="false" />
         <activity
             android:name=".ui.FamilyMemberView"
@@ -22,22 +34,22 @@
             android:name=".ui.OfficialView"
             android:exported="false" />
         <activity
-            android:name=".ui.EmergencyView"
+            android:name=".ui.content.emergency.EmergencyView"
             android:exported="false" />
         <activity
-            android:name=".ui.EmergencyContent"
+            android:name=".ui.content.emergency.EmergencyContent"
             android:exported="false" />
         <activity
-            android:name=".ui.HistoryView"
+            android:name=".ui.content.services.RequestBarangayClearance"
             android:exported="false" />
         <activity
-            android:name=".ui.ReservationContent"
+            android:name=".ui.content.reservation.ReservationContent"
             android:exported="false" />
         <activity
             android:name=".ui.ReservationView"
             android:exported="false" />
         <activity
-            android:name=".ui.ReservationRequest"
+            android:name=".ui.content.reservation.ReservationRequest"
             android:exported="false" />
         <activity
             android:name=".ui.ProfileView"
@@ -52,26 +64,26 @@
             android:name=".ui.VerifyAccountView"
             android:exported="false" />
         <activity
-            android:name=".ui.MessageContent"
+            android:name=".ui.content.message.MessageContent"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".ui.NewsViewContent"
+            android:name=".ui.content.news.NewsViewContent"
             android:exported="false" />
         <activity
-            android:name=".ui.MedicineView"
+            android:name=".ui.content.medicine.MedicineView"
             android:exported="false" />
         <activity
-            android:name=".ui.NewsView"
+            android:name=".ui.content.news.NewsView"
             android:exported="false" />
         <activity
-            android:name=".ui.MessageView"
+            android:name=".ui.content.message.MessageView"
             android:exported="false" />
         <activity
             android:name=".ui.WelcomeView"
             android:exported="false" />
         <activity
-            android:name=".ui.LoginView"
+            android:name=".ui.DashboardView"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

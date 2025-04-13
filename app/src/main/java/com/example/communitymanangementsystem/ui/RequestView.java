@@ -2,7 +2,6 @@ package com.example.communitymanangementsystem.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import androidx.activity.EdgeToEdge;
@@ -10,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.communitymanangementsystem.R;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.NavbarListener;
+import com.example.communitymanangementsystem.ui.content.medicine.MedicineView;
 
 public class RequestView extends AppCompatActivity {
     private NavbarListener navbarListener;
@@ -28,8 +28,6 @@ public class RequestView extends AppCompatActivity {
             Intent i = new Intent(RequestView.this, MedicineView.class);
             startActivity(i);
         });
-
-
 
     }
 }

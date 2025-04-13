@@ -1,5 +1,7 @@
 package com.example.communitymanangementsystem.Adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,15 +13,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.communitymanangementsystem.R;
+import com.example.communitymanangementsystem.components.buttonListerner.view_model.MedicineController;
 import com.example.communitymanangementsystem.model.MedicineViewModel;
+import com.example.communitymanangementsystem.ui.content.medicine.MedicineContent;
 
 import java.util.List;
 
 public class MedicineAdapter extends RecyclerView.Adapter<MedicineAdapter.MedicineViewHolder> {
     private List<MedicineViewModel> data;
+    private Context context;
 
-    public MedicineAdapter(List<MedicineViewModel> data){
+    public MedicineAdapter(Context context, List<MedicineViewModel> data){
         this.data = data;
+        this.context = context;
     }
 
     @NonNull
@@ -46,6 +52,10 @@ public class MedicineAdapter extends RecyclerView.Adapter<MedicineAdapter.Medici
                 holder.favorite.setImageResource(R.drawable.baseline_favorite_24);
                 holder.isFavorite = true;
             }
+        });
+        holder.itemView.setOnClickListener( v -> {
+            Intent intent = new Intent(context, MedicineContent.class);
+            context.startActivity(intent);
         });
     }
 

@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.communitymanangementsystem.R;
 import com.example.communitymanangementsystem.model.ReservationViewModel;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.NavbarListener;
-import com.example.communitymanangementsystem.components.buttonListerner.view_model.ReservationComponents;
+import com.example.communitymanangementsystem.components.buttonListerner.view_model.ReservationController;
 
 import java.util.List;
 
@@ -24,7 +24,7 @@ public class ReservationView extends AppCompatActivity {
 
         navbarListener = new NavbarListener(this);
 
-        ReservationComponents com = new ReservationComponents(this, findViewById(R.id._reservationItem));
+        ReservationController com = new ReservationController(this, findViewById(R.id._reservationItem));
         List<ReservationViewModel> modelList = com.reservationList();
         com.updateResevationList(modelList);
 

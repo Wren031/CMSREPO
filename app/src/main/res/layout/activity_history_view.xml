@@ -6,13 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C4C4C4"
-    tools:context=".ui.HistoryView">
+    tools:context=".ui.content.history.HistoryView">
 
-    <ImageView
-        android:src="@drawable/barangay_image"
-        android:layout_width="500dp"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"/>
 
     <LinearLayout
         android:id="@+id/top"
@@ -66,30 +61,48 @@
 
     </LinearLayout>
 
-    <EditText
-        android:elevation="10dp"
-        android:layout_marginTop="20dp"
-        android:textColor="#666161"
-        android:padding="15dp"
-        android:textSize="15sp"
-        android:hint="Search"
-        android:drawableEnd="@drawable/baseline_search_24"
-        android:layout_below="@+id/top"
-        android:background="@drawable/login_field_bg"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/_search"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:ems="10"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_below="@+id/_search"
-        android:id="@+id/_historyItem"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_width="350dp"
-        android:layout_height="match_parent"/>
 
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/_tab_layout"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/top">
+
+        <com.google.android.material.tabs.TabItem
+            android:text="History"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.google.android.material.tabs.TabItem
+            android:text="Pending"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.google.android.material.tabs.TabItem
+            android:text="Approved"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.google.android.material.tabs.TabItem
+            android:text="Denied"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/_view_payer"
+        android:layout_below="@+id/_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </androidx.viewpager2.widget.ViewPager2>
 
 
     <include
@@ -97,5 +110,7 @@
         android:id="@+id/buttom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+
 
 </RelativeLayout>

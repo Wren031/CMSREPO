@@ -67,26 +67,8 @@
     </LinearLayout>
 
 
-    <EditText
-        android:id="@+id/search_news"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/top"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/white_bg"
-        android:drawableEnd="@drawable/baseline_search_24"
-        android:drawablePadding="3dp"
-        android:paddingStart="10dp"
-        android:text="Search Service..."
-        android:textSize="14sp"
-        android:textColor="#4B504C"
-        android:textStyle="italic"
-        android:gravity="center_vertical"
-        android:padding="10dp"/>
-
     <ScrollView
-        android:layout_below="@+id/search_news"
+        android:layout_below="@+id/top"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"
@@ -176,86 +158,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </RelativeLayout>
-
-            <!-- Reservation Section -->
-            <RelativeLayout
-                android:id="@+id/reservation_btn"
-                android:layout_width="350dp"
-                android:layout_height="60dp"
-                android:background="@drawable/white_bg"
-                android:padding="10dp"
-                android:layout_marginBottom="10dp">
-
-                <ImageView
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/reservation"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"/>
-
-                <TextView
-                    android:textStyle="bold"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="50dp"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:text="RESERVATION"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </RelativeLayout>
-
-            <!-- Emergency Section -->
-            <RelativeLayout
-                android:id="@+id/emergency_btn"
-                android:layout_width="350dp"
-                android:layout_height="60dp"
-                android:background="@drawable/white_bg"
-                android:padding="10dp"
-                android:layout_marginBottom="10dp">
-
-                <ImageView
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/certificate"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"/>
-
-                <TextView
-                    android:textStyle="bold"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="50dp"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:text="REQUEST CERTIFICATE"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </RelativeLayout>
-
-            <!-- History Section -->
-            <RelativeLayout
-                android:id="@+id/history_btn"
-                android:layout_width="350dp"
-                android:layout_height="60dp"
-                android:background="@drawable/white_bg"
-                android:padding="10dp"
-                android:layout_marginBottom="10dp">
-
-                <ImageView
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/blotter"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"/>
-
-                <TextView
-                    android:textStyle="bold"
-                    android:layout_centerVertical="true"
-                    android:layout_marginStart="50dp"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:text="BLOTTER"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </RelativeLayout>
-
-
 
         </LinearLayout>
 
