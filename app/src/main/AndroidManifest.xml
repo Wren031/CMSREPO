@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CommunityManangementSystem"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.content.accountInformation.VerifyContent"
+            android:exported="false" />
+        <activity
+            android:name=".ui.content.history.HistoryView"
+            android:exported="false" />
         <activity
             android:name=".ui.content.news.ui.NewsCommentView"
             android:exported="false" />
@@ -64,7 +72,7 @@
             android:name=".ui.ServiceView"
             android:exported="false" />
         <activity
-            android:name=".ui.VerifyAccountView"
+            android:name=".ui.content.official.ui.OfficialContentView"
             android:exported="false" />
         <activity
             android:name=".ui.content.message.MessageContent"
@@ -86,7 +94,7 @@
             android:name=".ui.WelcomeView"
             android:exported="false" />
         <activity
-            android:name=".ui.content.history.HistoryView"
+            android:name=".ui.content.accountInformation.VerifyAccountView"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

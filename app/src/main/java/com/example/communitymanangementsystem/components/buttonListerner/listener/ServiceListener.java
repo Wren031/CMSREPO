@@ -14,7 +14,7 @@ import com.example.communitymanangementsystem.ui.content.official.ui.OfficialVie
 import com.example.communitymanangementsystem.ui.RequestView;
 import com.example.communitymanangementsystem.ui.ReservationView;
 import com.example.communitymanangementsystem.ui.ServiceView;
-import com.example.communitymanangementsystem.ui.VerifyAccountView;
+import com.example.communitymanangementsystem.ui.content.accountInformation.VerifyAccountView;
 
 public class ServiceListener {
     private Activity activity;
