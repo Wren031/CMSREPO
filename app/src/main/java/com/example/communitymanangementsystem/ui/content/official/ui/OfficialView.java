@@ -1,4 +1,4 @@
-package com.example.communitymanangementsystem.ui;
+package com.example.communitymanangementsystem.ui.content.official.ui;
 
 import android.os.Bundle;
 
@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.communitymanangementsystem.R;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.NavbarListener;
-import com.example.communitymanangementsystem.components.buttonListerner.view_model.OfficalController;
-import com.example.communitymanangementsystem.model.OfficialViewModel;
+import com.example.communitymanangementsystem.ui.content.official.controller.OfficalController;
+import com.example.communitymanangementsystem.ui.content.official.model.OfficialViewModel;
 
 
 import java.util.List;

@@ -1,15 +1,16 @@
-package com.example.communitymanangementsystem.components.buttonListerner.view_model;
+package com.example.communitymanangementsystem.ui.content.official.controller;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.View;
 
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.communitymanangementsystem.Adapter.OfficialAdapter;
+import com.example.communitymanangementsystem.components.buttonListerner.view_model.ResidentsController;
+import com.example.communitymanangementsystem.ui.content.official.adapter.OfficialAdapter;
 import com.example.communitymanangementsystem.R;
-import com.example.communitymanangementsystem.model.OfficialViewModel;
+import com.example.communitymanangementsystem.ui.content.official.model.OfficialViewModel;
 import com.example.communitymanangementsystem.model.ResidentsViewModel;
 
 import java.util.ArrayList;
@@ -31,7 +32,7 @@ public class OfficalController {
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(adapter);
 
-        GridLayoutManager layoutManager = new GridLayoutManager(context, 2);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
 
     }

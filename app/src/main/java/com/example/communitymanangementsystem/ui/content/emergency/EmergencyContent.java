@@ -16,5 +16,6 @@ public class EmergencyContent extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_emergency_content);
         navbarListener = new NavbarListener(this);
+
     }
 }

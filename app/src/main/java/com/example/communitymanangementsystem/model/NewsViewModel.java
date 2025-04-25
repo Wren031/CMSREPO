@@ -3,10 +3,10 @@ package com.example.communitymanangementsystem.model;
 public class NewsViewModel {
 
     int imageId;
-    String image;
+    int image;
     String text;
     String date;
-    public NewsViewModel(int imageId, String date, String text, String image) {
+    public NewsViewModel(int imageId, String date, String text, int image) {
         this.imageId = imageId;
         this.date = date;
         this.text = text;
@@ -17,7 +17,7 @@ public class NewsViewModel {
         return imageId;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 

@@ -8,7 +8,6 @@
     android:background="#C4C4C4"
     tools:context=".ui.content.history.HistoryView">
 
-
     <LinearLayout
         android:id="@+id/top"
         android:layout_width="350dp"
@@ -61,7 +60,62 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/_searchF"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
+        <EditText
+            android:id="@+id/search_news"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/white_bg"
+            android:drawableEnd="@drawable/baseline_search_24"
+            android:drawablePadding="3dp"
+            android:paddingStart="10dp"
+            android:text="Search History"
+            android:textSize="14sp"
+            android:textColor="#4B504C"
+            android:textStyle="italic"
+            android:gravity="center_vertical"
+            android:padding="10dp"/>
+
+        <RelativeLayout
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/white_bg"
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/_filter"
+                android:src="@drawable/baseline_filter_list_alt_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:textColor="#E94542"
+                android:layout_marginTop="-5dp"
+                android:id="@+id/text_filter"
+                android:text="Filter"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/_filter"
+                android:layout_marginStart="20dp"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/_tab_layout"
@@ -70,7 +124,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        android:layout_below="@+id/top">
+        android:layout_below="@+id/_searchF">
 
         <com.google.android.material.tabs.TabItem
             android:text="History"
@@ -95,13 +149,179 @@
 
     </com.google.android.material.tabs.TabLayout>
 
+    <RelativeLayout
+        android:elevation="10dp"
+        android:visibility="gone"
+        android:id="@+id/_filterLayout"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/white_bg"
+        android:layout_below="@+id/_searchF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/_settingsIcon"
+            android:padding="10dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/baseline_settings_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/_textCategory"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="By Category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+
+        <LinearLayout
+            android:id="@+id/_containerFirst"
+            android:layout_below="@+id/_textCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_marginStart="52dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textAlignment="center"
+                    android:id="@+id/_certificateBtn"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/grey_bg"
+                    android:textColor="@color/black"
+                    android:text="Barangay Certificate"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_below="@+id/_certificateBtn"
+                    android:id="@+id/_medicineBtn"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/grey_bg"
+                    android:textColor="@color/black"
+                    android:text="Medicine"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textAlignment="center"
+                    android:id="@+id/_reservationBtn"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/grey_bg"
+                    android:textColor="@color/black"
+                    android:text="Reservation"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:textAlignment="center"
+                    android:layout_below="@+id/_reservationBtn"
+                    android:id="@+id/_equipmentBtn"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/grey_bg"
+                    android:textColor="@color/black"
+                    android:text="Equipment"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:visibility="gone"
+                android:drawableEnd="@drawable/baseline_delete_24"
+                android:textAlignment="center"
+                android:layout_below="@+id/_certificateBtn"
+                android:id="@+id/_resultBtn"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:background="@drawable/grey_bg"
+                android:textColor="@color/black"
+                android:text="Medicine"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:text="Reset"
+                android:background="@drawable/register_btn"
+                android:layout_width="190dp"
+                android:layout_height="40dp">
+
+            </TextView>
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:textSize="16dp"
+                android:text="Apply"
+                android:background="@drawable/login_btn_bg"
+                android:layout_width="190dp"
+                android:layout_height="40dp">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/_view_payer"
         android:layout_below="@+id/_tab_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-
     </androidx.viewpager2.widget.ViewPager2>
 
 
@@ -110,7 +330,5 @@
         android:id="@+id/buttom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
-
 
 </RelativeLayout>

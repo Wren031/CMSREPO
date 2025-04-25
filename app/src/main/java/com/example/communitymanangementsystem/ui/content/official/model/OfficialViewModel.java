@@ -1,4 +1,6 @@
-package com.example.communitymanangementsystem.model;
+package com.example.communitymanangementsystem.ui.content.official.model;
+
+import com.example.communitymanangementsystem.model.ResidentsViewModel;
 
 public class OfficialViewModel {
 

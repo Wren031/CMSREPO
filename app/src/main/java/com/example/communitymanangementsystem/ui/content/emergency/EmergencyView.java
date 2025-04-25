@@ -25,6 +25,5 @@ public class EmergencyView extends AppCompatActivity {
         List<EmergencyViewModel> newServices = serviceComponents.emergencyList();
         serviceComponents.updateEmergencyList(newServices);
 
-
     }
 }

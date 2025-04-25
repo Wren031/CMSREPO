@@ -130,12 +130,78 @@
                 android:id="@+id/text_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Usa ka dako nga sunog ang nahitabo sa usa ka balay sa Barangay ____, hinungdan sa electrical short circuit. Ang kalayo kusog nga misaka, ug dali ra nakalat sa duol nga mga balay. Ang mga residente naningkamot nga magkuha og tubig aron mapalong ang sunog samtang ang mga bombero padulong sa lugar. Naay pipila nga nangaangol ug nagkinahanglan og medikal nga atensyon, apan walay naitalang patay. Daghang kabtangan ang nadamay, ug napawong ang sunog human sa kapin duha ka oras nga pagpaningkamot sa mga bombero."
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:lineSpacingExtra="4dp"
+                android:layout_marginTop="10dp"
                 android:gravity="start"
-                android:layout_marginTop="10dp"/>
+                android:lineSpacingExtra="4dp"
+                android:text="Usa ka dako nga sunog ang nahitabo sa usa ka balay sa Barangay ____, hinungdan sa electrical short circuit. Ang kalayo kusog nga misaka, ug dali ra nakalat sa duol nga mga balay. Ang mga residente naningkamot nga magkuha og tubig aron mapalong ang sunog samtang ang mga bombero padulong sa lugar. Naay pipila nga nangaangol ug nagkinahanglan og medikal nga atensyon, apan walay naitalang patay. Daghang kabtangan ang nadamay, ug napawong ang sunog human sa kapin duha ka oras nga pagpaningkamot sa mga bombero."
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/_totalLikes"
+                    android:layout_marginStart="4dp"
+                    android:text="0 Likes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+                <TextView
+                    android:layout_marginStart="10dp"
+                    android:text="1 Comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/_getLikes"
+                    android:src="@drawable/baseline_thumb_up_off_alt_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </ImageView>
+
+                <TextView
+                    android:layout_marginStart="5dp"
+                    android:padding="2dp"
+                    android:textSize="15sp"
+                    android:text="Like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/_commentID"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/baseline_mode_comment_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_marginStart="5dp"
+                    android:padding="2dp"
+                    android:textSize="15sp"
+                    android:text="Commment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>

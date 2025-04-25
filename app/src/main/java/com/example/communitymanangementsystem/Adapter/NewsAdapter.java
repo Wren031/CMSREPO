@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.communitymanangementsystem.R;
 import com.example.communitymanangementsystem.model.NewsViewModel;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.ButtonListener.LearnMoreListener;
@@ -37,7 +38,9 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
         NewsViewModel model = news.get(position);
         holder.text.setText(model.getText());
         holder.date.setText(model.getDate());
-
+        Glide.with(holder.itemView.getContext())
+                .load(model.getImage())
+                .into(holder.image);
         holder.itemView.setOnClickListener( v -> {
             if(this.listener != null){
                 this.listener.onLearnMoreListener(model);

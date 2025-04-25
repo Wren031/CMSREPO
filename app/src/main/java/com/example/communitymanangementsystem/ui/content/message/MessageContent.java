@@ -1,5 +1,6 @@
 package com.example.communitymanangementsystem.ui.content.message;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.EditText;
@@ -10,10 +11,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.communitymanangementsystem.Adapter.ChatAdapter;
+import com.example.communitymanangementsystem.ui.content.message.adapter.ChatAdapter;
 import com.example.communitymanangementsystem.R;
 import com.example.communitymanangementsystem.components.buttonListerner.view_model.ResidentsController;
-import com.example.communitymanangementsystem.model.ChatViewModel;
+import com.example.communitymanangementsystem.ui.content.message.model.ChatViewModel;
 import com.example.communitymanangementsystem.model.ResidentsViewModel;
 
 import java.text.SimpleDateFormat;
@@ -54,8 +55,10 @@ public class MessageContent extends AppCompatActivity {
         loadMessage();
 
         sendButton.setOnClickListener(v -> sentMessage());
+
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     public void loadMessage() {
 
         ResidentsController residentsComponents = new ResidentsController(new ArrayList<>());
@@ -87,13 +90,11 @@ public class MessageContent extends AppCompatActivity {
     public void sentMessage() {
         ResidentsController residentsComponents = new ResidentsController(new ArrayList<>());
         List<ResidentsViewModel> residents = residentsComponents.getResidents();
-
         String messageText = inputBox.getText().toString().trim();
+
         if (!messageText.isEmpty()) {
             ResidentsViewModel sender = residents.get(0);
-
             String currentTime = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(new Date());
-
             ChatViewModel newMessage = new ChatViewModel(
                     1,
                     sender,
@@ -101,7 +102,6 @@ public class MessageContent extends AppCompatActivity {
                     currentTime,
                     messageText
             );
-
             chatList.add(newMessage);
             chatAdapter.notifyItemInserted(chatList.size() - 1);
             inputBox.setText("");

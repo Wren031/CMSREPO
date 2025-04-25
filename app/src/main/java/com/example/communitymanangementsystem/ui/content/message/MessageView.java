@@ -9,9 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.communitymanangementsystem.Adapter.MessageAdapter;
+import com.example.communitymanangementsystem.ui.content.message.adapter.MessageAdapter;
 import com.example.communitymanangementsystem.R;
-import com.example.communitymanangementsystem.model.MessageViewModel;
+import com.example.communitymanangementsystem.ui.content.message.model.MessageViewModel;
 import com.example.communitymanangementsystem.model.ResidentsViewModel;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.ButtonListener.ChatListener;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.NavbarListener;
@@ -68,7 +68,7 @@ public class MessageView extends AppCompatActivity implements ChatListener {
                 "Yes",
                 "Permanent",
                 "Active",
-                "2025-04-04"
+                "2025-04-04",1
         );
 
         ResidentsViewModel resident2 = new ResidentsViewModel(
@@ -96,7 +96,7 @@ public class MessageView extends AppCompatActivity implements ChatListener {
                 "Yes",
                 "Permanent",
                 "Active",
-                "2025-04-04"
+                "2025-04-04",1
         );
         model.add(new MessageViewModel(1, resident, "sa", "12:00 PM", "message1", 5));
         model.add(new MessageViewModel(2, resident2, "sa", "01:00 PM", "message2", 3));

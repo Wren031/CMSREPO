@@ -1,167 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
              android:layout_width="wrap_content"
-                android:padding="10dp"
-             android:layout_height="180dp">
-
+            android:layout_marginStart="5dp"
+             android:layout_height="175dp">
 
 
     <RelativeLayout
-
-        android:background="#1877F2"
-        android:layout_width="180dp"
-        android:layout_height="170dp">
-
-        <TextView
-            android:layout_marginTop="5dp"
-            android:id="@+id/_nameOfficial"
-            android:layout_centerHorizontal="true"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:text="Javier, Wren"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-        </TextView>
-
-        <TextView
-            android:layout_centerHorizontal="true"
-            android:textSize="10sp"
-            android:layout_below="@+id/_nameOfficial"
-            android:id="@+id/_namePossition"
-            android:textColor="@color/white"
-            android:text="SK, Kagawad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-        </TextView>
+        android:elevation="10dp"
+        android:background="@drawable/white_bg"
+        android:layout_width="350dp"
+        android:layout_height="160dp">
 
         <ImageView
+            android:layout_marginStart="10dp"
             android:id="@+id/_imageOfficial"
-            android:layout_marginTop="10dp"
-            android:layout_centerInParent="true"
-            android:scaleType="centerCrop"
+            android:layout_width="140dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_image"
             android:clipToOutline="true"
-            android:layout_gravity="center"
-            android:background="@drawable/circle_image"
-            android:elevation="10dp"
-            android:layout_below="@+id/_namePossition"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/daniel"
-            android:layout_width="70dp"
-            android:layout_height="70dp">
+
+            android:scaleType="centerCrop"
+            android:src="@drawable/daniel">
 
         </ImageView>
 
         <RelativeLayout
-            android:layout_marginTop="65dp"
-            android:background="@color/white"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_marginStart="170dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-        </RelativeLayout>
-
-        <LinearLayout
-            android:layout_below="@+id/_imageOfficial"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_centerHorizontal="true">
-
-            <!-- Status Section -->
-            <RelativeLayout
+            <TextView
+                android:textSize="16sp"
+                android:id="@+id/_nameOfficial"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="20dp">
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Javier, Wren"
+                android:textColor="@color/black"
+                android:textStyle="bold">
 
-                <TextView
-                    android:id="@+id/_statusOfficial"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Status"
-                    android:textColor="@color/black"
-                    android:textSize="10sp" />
+            </TextView>
 
-                <ImageView
-                    android:id="@+id/_status_iconOfficial"
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
-                    android:layout_below="@id/_statusOfficial"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="2dp"
-                    android:src="@drawable/baseline_circle_24" />
-            </RelativeLayout>
-
-            <!-- Divider -->
-            <View
-                android:layout_width="1dp"
-                android:layout_height="20dp"
-                android:background="@color/black"
-                android:layout_marginEnd="20dp" />
-
-            <!-- Age Section -->
-            <RelativeLayout
+            <TextView
+                android:id="@+id/_namePossition"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="20dp">
+                android:layout_below="@+id/_nameOfficial"
+                android:layout_centerHorizontal="true"
+                android:text="SK, Kagawad"
+                android:textColor="@color/black"
+                android:textSize="10sp">
 
-                <TextView
-                    android:id="@+id/_ageOfficial"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Age"
-                    android:textColor="@color/black"
-                    android:textSize="10sp" />
-
-                <TextView
-                    android:layout_marginStart="4dp"
-                    android:id="@+id/_age_valueOfficial"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/_ageOfficial"
-                    android:text="21"
-                    android:textColor="@color/black"
-                    android:textSize="8sp" />
-            </RelativeLayout>
-
-            <!-- Divider -->
-            <View
-                android:layout_width="1dp"
-                android:layout_height="20dp"
-                android:background="@color/black"
-                android:layout_marginEnd="20dp" />
-
-            <!-- You can add another section here if needed -->
+            </TextView>
 
 
-            <RelativeLayout
 
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/_namePossition"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:id="@+id/_view"
-                    android:textColor="@color/black"
-                    android:textSize="10sp"
-                    android:text="View"
+
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/_nameOfficial"
+                    android:layout_centerHorizontal="true"
+                    android:text="Status"
+                    android:textColor="@color/black"
+                    android:textSize="12sp">
+
+                </TextView>
 
                 <ImageView
-                    android:id="@+id/_viewBntOfficial"
-                    android:layout_marginStart="5dp"
-                    android:src="@drawable/baseline_remove_red_eye_24"
-                    android:textSize="8sp"
-                    android:layout_below="@id/_view"
-                    android:text="Details"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginStart="109dp"
+                    android:id="@+id/_status_iconOfficial"
                     android:layout_width="10dp"
-                    android:layout_height="10dp" />
-            </RelativeLayout>
+                    android:layout_height="10dp"
+                    android:src="@drawable/baseline_circle_24" />
 
-        </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:layout_marginTop="25dp"
+                android:layout_below="@+id/_namePossition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/_nameOfficial"
+                    android:layout_centerHorizontal="true"
+                    android:text="Age"
+                    android:textColor="@color/black"
+                    android:textSize="12sp">
+
+                </TextView>
+
+                <TextView
+                    android:textStyle="bold"
+                    android:id="@+id/_ageOfficial"
+                    android:layout_marginStart="122dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/_nameOfficial"
+                    android:layout_centerHorizontal="true"
+                    android:text="21"
+                    android:textColor="@color/black"
+                    android:textSize="10sp">
+
+                </TextView>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_marginTop="40dp"
+                android:layout_below="@+id/_namePossition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/_nameOfficial"
+                    android:layout_centerHorizontal="true"
+                    android:text="Gender"
+                    android:textColor="@color/black"
+                    android:textSize="12sp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/_genderOfficial"
+                    android:layout_marginStart="100dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/_nameOfficial"
+                    android:layout_centerHorizontal="true"
+                    android:text="Male"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="10sp">
+
+                </TextView>
+
+
+
+            </LinearLayout>
+
+
+            <TextView
+
+                android:id="@+id/_viewBtn"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="120dp"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:text="View"
+                android:textSize="10sp"
+                android:background="@drawable/login_btn_bg"
+                android:layout_width="120dp"
+                android:layout_height="25dp">
+
+            </TextView>
+
+
+
+        </RelativeLayout>
 
     </RelativeLayout>
+
 
 </RelativeLayout>

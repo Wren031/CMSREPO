@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.widget.TextView;
 
 import com.example.communitymanangementsystem.R;
-import com.example.communitymanangementsystem.ui.content.news.NewsView;
+import com.example.communitymanangementsystem.ui.content.news.ui.NewsView;
 
 public class NewsListener {
 

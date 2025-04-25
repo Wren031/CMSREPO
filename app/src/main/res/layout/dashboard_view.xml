@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#EBEBEB"
-    tools:context=".ui.DashboardView">
+    tools:context=".ui.dashboard.DashboardView">
 
     <ImageView
         android:src="@drawable/barangay_image"
@@ -144,25 +144,37 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingStart="20dp"
-        android:paddingTop="10dp"
-        android:gravity="center_vertical">
+        android:paddingTop="10dp">
 
         <TextView
             android:textSize="15sp"
             android:text="Service"
+            android:gravity=""
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/loading_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:gravity="right"
+        android:paddingTop="10dp">
+
         <TextView
-            android:layout_marginStart="270dp"
             android:id="@+id/view_all"
             android:textStyle="bold"
+            android:layout_marginRight="20dp"
             android:textColor="@color/black"
             android:textSize="15sp"
             android:text="View all"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-
     </LinearLayout>
 
     <ScrollView

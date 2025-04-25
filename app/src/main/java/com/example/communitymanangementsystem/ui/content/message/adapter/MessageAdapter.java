@@ -1,4 +1,4 @@
-package com.example.communitymanangementsystem.Adapter;
+package com.example.communitymanangementsystem.ui.content.message.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.communitymanangementsystem.R;
-import com.example.communitymanangementsystem.model.MessageViewModel;
+import com.example.communitymanangementsystem.ui.content.message.model.MessageViewModel;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.ButtonListener.ChatListener;
 import com.example.communitymanangementsystem.ui.content.message.MessageContent;
 

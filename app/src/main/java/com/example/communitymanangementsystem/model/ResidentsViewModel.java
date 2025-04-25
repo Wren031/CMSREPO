@@ -27,9 +27,14 @@ public class ResidentsViewModel {
     private String shelterType;
     private String status;
     private String createdAt;
+    private int image;
 
 
-    public ResidentsViewModel(int residentsId, String firstName, String middleName, String lastName, String gender, String birthday, String email, String citizenship, String religion, String age, String contactNumber, String education, String maritalStatus, String weight, String sector, String houseBldg, String height, String sinceYear, String sitio, String houseOwner, String purok, String houseMaterial, String familyHead, String shelterType, String status, String createdAt) {
+    public int getImage() {
+        return image;
+    }
+
+    public ResidentsViewModel(int residentsId, String firstName, String middleName, String lastName, String gender, String birthday, String email, String citizenship, String religion, String age, String contactNumber, String education, String maritalStatus, String weight, String sector, String houseBldg, String height, String sinceYear, String sitio, String houseOwner, String purok, String houseMaterial, String familyHead, String shelterType, String status, String createdAt, int image) {
         this.residentsId = residentsId;
         this.firstName = firstName;
         this.middleName = middleName;
@@ -56,6 +61,7 @@ public class ResidentsViewModel {
         this.shelterType = shelterType;
         this.status = status;
         this.createdAt = createdAt;
+        this.image = image;
     }
 
     public int getResidentsId() {

@@ -14,6 +14,7 @@ import com.example.communitymanangementsystem.model.category_model.MedicineCateg
 import java.util.List;
 
 public class MedicineCategoryAdapter extends RecyclerView.Adapter<MedicineCategoryAdapter.MedicineCategoryViewHolder> {
+
     private List<MedicineCategoryViewModel> model;
 
     public MedicineCategoryAdapter(List<MedicineCategoryViewModel> model){

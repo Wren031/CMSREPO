@@ -7,7 +7,6 @@
     tools:context=".ui.ProfileView"
     android:background="#C4C4C4">
 
-
     <LinearLayout
         android:id="@+id/top"
         android:layout_width="350dp"
@@ -59,6 +58,15 @@
         </RelativeLayout>
 
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:layout_below="@+id/top"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/_familyItem"
+        android:layout_marginTop="20dp"
+        android:layout_width="350dp"
+        android:layout_height="match_parent"/>
 
     <include
         layout="@layout/_layout_navigation_bar"

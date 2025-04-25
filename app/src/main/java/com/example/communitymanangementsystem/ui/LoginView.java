@@ -14,6 +14,7 @@ import com.example.communitymanangementsystem.components.buttonListerner.view_mo
 import com.example.communitymanangementsystem.model.AuthenticationViewModel;
 import com.example.communitymanangementsystem.model.ResidentsViewModel;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.AlertListener;
+import com.example.communitymanangementsystem.ui.dashboard.DashboardView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +42,7 @@ public class LoginView extends AppCompatActivity {
                 "john.doe@example.com", "Filipino", "Christian", "21", "09171234567",
                 "Bachelor's Degree", "Single", "75kg", "Urban", "House No. 12",
                 "5'10\"", "2015", "Sitio 1", "Yes", "Purok 3", "Concrete",
-                "Yes", "Permanent", "Active", "2025-04-04"
+                "Yes", "Permanent", "Active", "2025-04-04",1
         ), "admin", "1234"));
 
         adapter = new AuthenticationController(users);
@@ -61,5 +62,6 @@ public class LoginView extends AppCompatActivity {
                 }
             }
         });
+
     }
 }

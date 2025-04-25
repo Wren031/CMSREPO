@@ -1,4 +1,4 @@
-package com.example.communitymanangementsystem.ui.content.news;
+package com.example.communitymanangementsystem.ui.content.news.ui;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import androidx.activity.EdgeToEdge;
@@ -41,10 +41,9 @@ public class NewsView extends AppCompatActivity implements LearnMoreListener {
         adapter = new NewsAdapter(model, (LearnMoreListener) this);
         view = findViewById(R.id._newsItem);
 
-        model.add(new NewsViewModel(1, "Jan 31, 2025", "Something Accident", "as"));
-        model.add(new NewsViewModel(1, "Jan 31, 2025", "Something Accident", "as"));
-        model.add(new NewsViewModel(1, "Jan 31, 2025", "Something Accident", "as"));
-        model.add(new NewsViewModel(1, "Jan 31, 2025", "Something Accident", "as"));
+
+        model.add(new NewsViewModel(1, "Jan 31, 2025", "Something Accident", R.drawable.ayuda));
+        model.add(new NewsViewModel(1, "Jan 31, 2025", "Something Accident", R.drawable.ayuda));
 
         view.setHasFixedSize(true);
         view.setAdapter(adapter);

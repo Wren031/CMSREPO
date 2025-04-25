@@ -54,6 +54,7 @@ public class MedicineContent extends AppCompatActivity {
 
             }
         });
+
     }
 
     private void addQuantity() {

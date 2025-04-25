@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="360dp">
+
+    <RelativeLayout
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:id="@+id/_namePossition"
+            android:text="Family Head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/_namePossition"
+            android:textColor="#808080"
+            android:textSize="14sp"
+            android:id="@+id/_nameText"
+            android:text="Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/_nameFamily"
+            android:textSize="14sp"
+            android:layout_below="@+id/_nameText"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content">
+
+        </EditText>
+
+        <TextView
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/_nameFamily"
+            android:textColor="#808080"
+            android:textSize="14sp"
+            android:id="@+id/_contactNumberText"
+            android:text="Contact Number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/_contactFamily"
+            android:textSize="14sp"
+            android:layout_below="@+id/_contactNumberText"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content">
+
+        </EditText>
+
+        <TextView
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/_contactFamily"
+            android:textColor="#808080"
+            android:textSize="14sp"
+            android:id="@+id/_genderText"
+            android:text="Gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <EditText
+            android:id="@+id/_genderFamily"
+            android:textSize="14sp"
+            android:layout_below="@+id/_genderText"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content">
+
+        </EditText>
+
+        <TextView
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/_genderFamily"
+            android:textColor="#808080"
+            android:textSize="14sp"
+            android:id="@+id/_statusText"
+            android:text="Status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <EditText
+            android:id="@+id/_statusFamily"
+            android:textSize="14sp"
+            android:layout_below="@+id/_statusText"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content">
+
+        </EditText>
+
+        <TextView
+            android:textSize="15sp"
+            android:id="@+id/_viewBtn"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:text="View"
+            android:background="@drawable/login_btn_bg"
+            android:layout_below="@+id/_statusFamily"
+            android:layout_width="120dp"
+            android:layout_height="40dp">
+        </TextView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

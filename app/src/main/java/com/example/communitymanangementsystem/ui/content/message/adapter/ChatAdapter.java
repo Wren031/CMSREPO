@@ -1,4 +1,4 @@
-package com.example.communitymanangementsystem.Adapter;
+package com.example.communitymanangementsystem.ui.content.message.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.communitymanangementsystem.R;
-import com.example.communitymanangementsystem.model.ChatViewModel;
+import com.example.communitymanangementsystem.ui.content.message.model.ChatViewModel;
 
 import java.util.List;
 

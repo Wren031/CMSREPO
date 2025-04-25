@@ -7,10 +7,10 @@ import android.widget.TextView;
 
 import com.example.communitymanangementsystem.R;
 import com.example.communitymanangementsystem.ui.content.emergency.EmergencyView;
-import com.example.communitymanangementsystem.ui.FamilyMemberView;
+import com.example.communitymanangementsystem.ui.content.family.ui.FamilyMemberView;
 import com.example.communitymanangementsystem.ui.content.history.HistoryView;
-import com.example.communitymanangementsystem.ui.content.news.NewsView;
-import com.example.communitymanangementsystem.ui.OfficialView;
+import com.example.communitymanangementsystem.ui.content.news.ui.NewsView;
+import com.example.communitymanangementsystem.ui.content.official.ui.OfficialView;
 import com.example.communitymanangementsystem.ui.RequestView;
 import com.example.communitymanangementsystem.ui.ReservationView;
 import com.example.communitymanangementsystem.ui.ServiceView;

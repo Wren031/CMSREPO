@@ -1,6 +1,5 @@
-package com.example.communitymanangementsystem.Adapter;
+package com.example.communitymanangementsystem.ui.content.official.adapter;
 
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +12,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.communitymanangementsystem.R;
-import com.example.communitymanangementsystem.model.OfficialViewModel;
+import com.example.communitymanangementsystem.ui.content.official.model.OfficialViewModel;
 
 import java.util.List;
 
@@ -42,11 +41,9 @@ public class OfficialAdapter extends RecyclerView.Adapter<OfficialAdapter.Offcia
                     .setTitle("Hello " + model.getResidents().getFullName())
                     .setMessage("You clicked the button. Do you want to continue?")
                     .setPositiveButton("Yes", (dialog, which) -> {
-                        // Do something when user clicks Yes
                         Toast.makeText(holder.itemView.getContext(), "You clicked Yes!", Toast.LENGTH_SHORT).show();
                     })
                     .setNegativeButton("No", (dialog, which) -> {
-                        // Do something when user clicks No
                         dialog.dismiss();
                     })
                     .show();
@@ -65,15 +62,15 @@ public class OfficialAdapter extends RecyclerView.Adapter<OfficialAdapter.Offcia
         ImageView image;
         ImageView status;
         TextView age;
-        ImageView btn;
+        TextView btn;
         public OffcialViewHolder(@NonNull View itemView) {
             super(itemView);
             this.name = itemView.findViewById(R.id._nameOfficial);
             this.possition = itemView.findViewById(R.id._namePossition);
             this.image = itemView.findViewById(R.id._imageOfficial);
             this.status = itemView.findViewById(R.id._status_iconOfficial);
-            this.age = itemView.findViewById(R.id._age_valueOfficial);
-            this.btn = itemView.findViewById(R.id._viewBntOfficial);
+            this.age = itemView.findViewById(R.id._ageOfficial);
+            this.btn = itemView.findViewById(R.id._viewBtn);
         }
     }
 }
