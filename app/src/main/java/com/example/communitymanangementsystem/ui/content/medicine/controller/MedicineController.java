@@ -1,4 +1,4 @@
-package com.example.communitymanangementsystem.components.buttonListerner.view_model;
+package com.example.communitymanangementsystem.ui.content.medicine.controller;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -7,9 +7,9 @@ import android.view.View;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.communitymanangementsystem.Adapter.MedicineAdapter;
+import com.example.communitymanangementsystem.ui.content.medicine.adapter.MedicineAdapter;
 import com.example.communitymanangementsystem.R;
-import com.example.communitymanangementsystem.model.MedicineViewModel;
+import com.example.communitymanangementsystem.ui.content.medicine.model.MedicineViewModel;
 import com.example.communitymanangementsystem.model.category_model.MedicineCategoryViewModel;
 
 import java.util.ArrayList;

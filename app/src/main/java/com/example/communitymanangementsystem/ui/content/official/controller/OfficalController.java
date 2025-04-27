@@ -28,7 +28,7 @@ public class OfficalController {
         this.model = new ArrayList<>();
 
         recyclerView = parentView.findViewById(R.id._officialItem);
-        adapter = new OfficialAdapter(model);
+        adapter = new OfficialAdapter(context, model);
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(adapter);
 

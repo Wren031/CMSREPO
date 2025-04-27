@@ -17,14 +17,16 @@
 
         <!-- News Button -->
         <RelativeLayout
+
             android:id="@+id/news_button"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:gravity="center">
 
             <RelativeLayout
+
                 android:id="@+id/news"
-                android:background="@drawable/white_bg"
+                android:background="bl"
                 android:layout_width="match_parent"
                 android:layout_height="70dp">
 
@@ -40,6 +42,7 @@
             </RelativeLayout>
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_below="@id/news"
                 android:layout_marginTop="5dp"
                 android:text="News"
@@ -76,6 +79,7 @@
             </RelativeLayout>
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_below="@id/service"
                 android:layout_marginTop="5dp"
                 android:text="Services"
@@ -112,6 +116,7 @@
             </RelativeLayout>
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_below="@id/request"
                 android:layout_marginTop="5dp"
                 android:text="Requests"
@@ -196,6 +201,7 @@
             </RelativeLayout>
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_below="@id/emergency"
                 android:layout_marginTop="5dp"
                 android:text="Emergency"
@@ -232,6 +238,7 @@
             </RelativeLayout>
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_below="@id/history"
                 android:layout_marginTop="5dp"
                 android:text="History"
@@ -269,6 +276,7 @@
             </RelativeLayout>
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_below="@id/barangay"
                 android:layout_marginTop="5dp"
                 android:text="Barangay Official"
@@ -306,6 +314,7 @@
             </RelativeLayout>
 
             <TextView
+                android:textColor="@color/black"
                 android:layout_below="@id/family"
                 android:layout_marginTop="5dp"
                 android:text="Family Member"

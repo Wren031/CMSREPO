@@ -1,4 +1,4 @@
-package com.example.communitymanangementsystem.ui.content.medicine;
+package com.example.communitymanangementsystem.ui.content.medicine.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,8 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.communitymanangementsystem.R;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.NavbarListener;
 import com.example.communitymanangementsystem.components.buttonListerner.view_model.MedicineCategoryController;
-import com.example.communitymanangementsystem.components.buttonListerner.view_model.MedicineController;
-import com.example.communitymanangementsystem.model.MedicineViewModel;
+import com.example.communitymanangementsystem.ui.content.medicine.controller.MedicineController;
+import com.example.communitymanangementsystem.ui.content.medicine.model.MedicineViewModel;
 import com.example.communitymanangementsystem.model.category_model.MedicineCategoryViewModel;
 import com.example.communitymanangementsystem.ui.RequestView;
 

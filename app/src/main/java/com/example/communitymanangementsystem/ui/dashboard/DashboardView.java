@@ -6,12 +6,12 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.communitymanangementsystem.R;
 import com.example.communitymanangementsystem.model.NewsViewModel;
-import com.example.communitymanangementsystem.model.ServiceViewModel;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.NavbarListener;
 import com.example.communitymanangementsystem.components.buttonListerner.view_model.NewsController;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.NewsListener;
-import com.example.communitymanangementsystem.components.buttonListerner.view_model.ServiceController;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.ServiceListener;
+import com.example.communitymanangementsystem.ui.content.official.controller.OfficialControllerDashboard;
+import com.example.communitymanangementsystem.ui.content.official.model.OfficialViewModel;
 import com.example.communitymanangementsystem.ui.dashboard.components.LoadingAnimationController;
 
 import java.util.List;
@@ -35,10 +35,10 @@ public class DashboardView extends AppCompatActivity{
         loadingController.startLoadingAnimation();
 
 
-        // display service data
-        ServiceController serviceComponents = new ServiceController(this, findViewById(R.id._serviceView));
-        List<ServiceViewModel> newServices = serviceComponents.fetchNewServiceList();
-        serviceComponents.updateServiceList(newServices);
+        OfficialControllerDashboard serviceComponents = new OfficialControllerDashboard(this, findViewById(R.id._officialItemView));
+        List<OfficialViewModel> newServices = serviceComponents.officialList();
+        serviceComponents.updateOfficialList(newServices);
+
 
         // display news data
         NewsController newsComponents = new NewsController(this, findViewById(R.id._newsItem));

@@ -1,4 +1,4 @@
-package com.example.communitymanangementsystem.model;
+package com.example.communitymanangementsystem.ui.content.medicine.model;
 
 import com.example.communitymanangementsystem.model.category_model.MedicineCategoryViewModel;
 

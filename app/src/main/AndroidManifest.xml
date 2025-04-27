@@ -15,6 +15,24 @@
         android:theme="@style/Theme.CommunityManangementSystem"
         tools:targetApi="31">
         <activity
+            android:name=".ui.content.settings.PasswordSettingsView"
+            android:exported="false" />
+        <activity
+            android:name=".ui.content.settings.QrCodeView"
+            android:exported="false" />
+        <activity
+            android:name=".ui.content.settings.DeleteAccountView"
+            android:exported="false" />
+        <activity
+            android:name=".ui.content.settings.PasswordSettings"
+            android:exported="false" />
+        <activity
+            android:name=".ui.content.settings.NotificationSettingsView"
+            android:exported="false" />
+        <activity
+            android:name=".ui.content.settings.SettingsView"
+            android:exported="false" />
+        <activity
             android:name=".ui.content.accountInformation.VerifyContent"
             android:exported="false" />
         <activity
@@ -24,7 +42,7 @@
             android:name=".ui.content.news.ui.NewsCommentView"
             android:exported="false" />
         <activity
-            android:name=".ui.content.medicine.MedicineContent"
+            android:name=".ui.content.medicine.ui.MedicineContent"
             android:exported="false" />
         <activity
             android:name=".ui.content.sports.SportsContent"
@@ -45,10 +63,10 @@
             android:name=".ui.content.official.ui.OfficialView"
             android:exported="false" />
         <activity
-            android:name=".ui.content.emergency.EmergencyView"
+            android:name=".ui.content.emergency.ui.EmergencyView"
             android:exported="false" />
         <activity
-            android:name=".ui.content.emergency.EmergencyContent"
+            android:name=".ui.content.emergency.ui.EmergencyContent"
             android:exported="false" />
         <activity
             android:name=".ui.content.services.RequestBarangayClearance"
@@ -82,7 +100,7 @@
             android:name=".ui.dashboard.DashboardView"
             android:exported="false" />
         <activity
-            android:name=".ui.content.medicine.MedicineView"
+            android:name=".ui.content.medicine.ui.MedicineView"
             android:exported="false" />
         <activity
             android:name=".ui.content.news.ui.NewsView"

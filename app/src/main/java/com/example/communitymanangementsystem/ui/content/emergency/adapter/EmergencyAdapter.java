@@ -1,4 +1,4 @@
-package com.example.communitymanangementsystem.Adapter;
+package com.example.communitymanangementsystem.ui.content.emergency.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.communitymanangementsystem.R;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.ButtonListener.EmergencyListener;
-import com.example.communitymanangementsystem.model.EmergencyViewModel;
+import com.example.communitymanangementsystem.ui.content.emergency.model.EmergencyViewModel;
 
 import java.util.List;
 

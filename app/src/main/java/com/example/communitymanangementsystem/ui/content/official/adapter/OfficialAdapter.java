@@ -1,26 +1,29 @@
 package com.example.communitymanangementsystem.ui.content.official.adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.communitymanangementsystem.R;
 import com.example.communitymanangementsystem.ui.content.official.model.OfficialViewModel;
+import com.example.communitymanangementsystem.ui.content.official.ui.OfficialContentView;
 
 import java.util.List;
 
 public class OfficialAdapter extends RecyclerView.Adapter<OfficialAdapter.OffcialViewHolder> {
     private List<OfficialViewModel> data;
+    private Context context;
 
-    public OfficialAdapter(List<OfficialViewModel> data){
-        this.data = data;
+    public OfficialAdapter(Context context, List<OfficialViewModel> data){
+        this.context = context;
+    this.data = data;
     }
 
     @NonNull
@@ -37,16 +40,8 @@ public class OfficialAdapter extends RecyclerView.Adapter<OfficialAdapter.Offcia
         holder.possition.setText(model.getPossition());
         holder.age.setText(model.getResidents().getAge());
         holder.btn.setOnClickListener(v -> {
-            new AlertDialog.Builder(holder.itemView.getContext())
-                    .setTitle("Hello " + model.getResidents().getFullName())
-                    .setMessage("You clicked the button. Do you want to continue?")
-                    .setPositiveButton("Yes", (dialog, which) -> {
-                        Toast.makeText(holder.itemView.getContext(), "You clicked Yes!", Toast.LENGTH_SHORT).show();
-                    })
-                    .setNegativeButton("No", (dialog, which) -> {
-                        dialog.dismiss();
-                    })
-                    .show();
+            Intent intent = new Intent(context, OfficialContentView.class);
+            context.startActivity(intent);
         });
 
     }

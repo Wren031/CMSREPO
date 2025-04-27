@@ -85,20 +85,41 @@
         android:gravity="center_vertical"
         android:padding="10dp"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
+    <ScrollView
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/search_news"
-        android:id="@+id/_officialItem"
-        android:layout_width="360dp"
-        android:layout_height="match_parent"/>
-
-
-    <include
-        layout="@layout/_layout_navigation_bar"
-        android:id="@+id/buttom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/_officialItem"
+                    android:layout_width="360dp"
+                    android:layout_height="match_parent"/>
+
+
+            </RelativeLayout>
+
+
+            <include
+                layout="@layout/_layout_navigation_bar"
+                android:id="@+id/buttom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 
 </RelativeLayout>

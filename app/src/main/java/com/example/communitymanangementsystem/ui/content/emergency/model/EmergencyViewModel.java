@@ -1,4 +1,4 @@
-package com.example.communitymanangementsystem.model;
+package com.example.communitymanangementsystem.ui.content.emergency.model;
 
 public class EmergencyViewModel {
     int emergencyID;

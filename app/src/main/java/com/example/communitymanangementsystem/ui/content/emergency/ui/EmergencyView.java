@@ -1,4 +1,4 @@
-package com.example.communitymanangementsystem.ui.content.emergency;
+package com.example.communitymanangementsystem.ui.content.emergency.ui;
 
 import android.os.Bundle;
 
@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.communitymanangementsystem.R;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.NavbarListener;
-import com.example.communitymanangementsystem.components.buttonListerner.view_model.EmergencyController;
-import com.example.communitymanangementsystem.model.EmergencyViewModel;
+import com.example.communitymanangementsystem.ui.content.emergency.controller.EmergencyController;
+import com.example.communitymanangementsystem.ui.content.emergency.model.EmergencyViewModel;
 
 import java.util.List;
 

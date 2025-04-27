@@ -6,7 +6,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.communitymanangementsystem.R;
-import com.example.communitymanangementsystem.ui.content.emergency.EmergencyView;
+import com.example.communitymanangementsystem.ui.content.emergency.ui.EmergencyView;
 import com.example.communitymanangementsystem.ui.content.family.ui.FamilyMemberView;
 import com.example.communitymanangementsystem.ui.content.history.HistoryView;
 import com.example.communitymanangementsystem.ui.content.news.ui.NewsView;

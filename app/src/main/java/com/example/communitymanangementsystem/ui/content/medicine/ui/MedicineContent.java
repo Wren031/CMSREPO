@@ -1,4 +1,4 @@
-package com.example.communitymanangementsystem.ui.content.medicine;
+package com.example.communitymanangementsystem.ui.content.medicine.ui;
 
 import android.os.Bundle;
 import android.widget.TextView;

@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.communitymanangementsystem.R;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.NavbarListener;
-import com.example.communitymanangementsystem.ui.content.medicine.MedicineView;
+import com.example.communitymanangementsystem.ui.content.medicine.ui.MedicineView;
 
 public class RequestView extends AppCompatActivity {
     private NavbarListener navbarListener;

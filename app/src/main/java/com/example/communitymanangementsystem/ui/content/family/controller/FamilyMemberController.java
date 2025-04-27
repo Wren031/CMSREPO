@@ -44,6 +44,14 @@ public class FamilyMemberController {
         }
     }
 
+
+    public void deleteUser(int id){
+        List<FamilyMemberViewModel> i = new ArrayList<>();
+        for (FamilyMemberViewModel s : i ){
+
+        }
+    }
+
     public List<FamilyMemberViewModel> addData(){
         ResidentsController residentsComponents = new ResidentsController(new ArrayList<>());
         List<ResidentsViewModel> residents = residentsComponents.getResidents();

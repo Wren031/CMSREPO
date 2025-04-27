@@ -1,4 +1,4 @@
-package com.example.communitymanangementsystem.Adapter;
+package com.example.communitymanangementsystem.ui.content.medicine.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,9 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.communitymanangementsystem.R;
-import com.example.communitymanangementsystem.components.buttonListerner.view_model.MedicineController;
-import com.example.communitymanangementsystem.model.MedicineViewModel;
-import com.example.communitymanangementsystem.ui.content.medicine.MedicineContent;
+import com.example.communitymanangementsystem.ui.content.medicine.model.MedicineViewModel;
+import com.example.communitymanangementsystem.ui.content.medicine.ui.MedicineContent;
 
 import java.util.List;
 

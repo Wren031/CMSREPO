@@ -1,4 +1,4 @@
-package com.example.communitymanangementsystem.components.buttonListerner.view_model;
+package com.example.communitymanangementsystem.ui.content.emergency.controller;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -8,11 +8,11 @@ import android.view.View;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.communitymanangementsystem.Adapter.EmergencyAdapter;
+import com.example.communitymanangementsystem.ui.content.emergency.adapter.EmergencyAdapter;
 import com.example.communitymanangementsystem.R;
 import com.example.communitymanangementsystem.components.buttonListerner.listener.ButtonListener.EmergencyListener;
-import com.example.communitymanangementsystem.model.EmergencyViewModel;
-import com.example.communitymanangementsystem.ui.content.emergency.EmergencyContent;
+import com.example.communitymanangementsystem.ui.content.emergency.model.EmergencyViewModel;
+import com.example.communitymanangementsystem.ui.content.emergency.ui.EmergencyContent;
 
 import java.util.ArrayList;
 import java.util.List;

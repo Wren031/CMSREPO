@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.widget.ImageView;
 
 import com.example.communitymanangementsystem.R;
+import com.example.communitymanangementsystem.ui.content.settings.SettingsView;
 import com.example.communitymanangementsystem.ui.dashboard.DashboardView;
 import com.example.communitymanangementsystem.ui.content.message.MessageView;
 import com.example.communitymanangementsystem.ui.ProfileView;
@@ -35,6 +36,10 @@ public class NavbarListener {
         });
         message.setOnClickListener(v -> {
             Intent i = new Intent(activity, MessageView.class);
+            activity.startActivity(i);
+        });
+        settings.setOnClickListener(v ->{
+            Intent i = new Intent(activity, SettingsView.class);
             activity.startActivity(i);
         });
 

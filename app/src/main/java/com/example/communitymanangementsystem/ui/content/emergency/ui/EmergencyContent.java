@@ -1,4 +1,4 @@
-package com.example.communitymanangementsystem.ui.content.emergency;
+package com.example.communitymanangementsystem.ui.content.emergency.ui;
 
 import android.os.Bundle;
 

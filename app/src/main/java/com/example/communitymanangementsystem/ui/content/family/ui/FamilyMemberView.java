@@ -14,6 +14,7 @@ import java.util.List;
 
 public class FamilyMemberView extends AppCompatActivity {
     private NavbarListener navbarListener;
+    private FamilyMemberController controller;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,9 +23,14 @@ public class FamilyMemberView extends AppCompatActivity {
         navbarListener = new NavbarListener(this);
 
 
-        FamilyMemberController components = new FamilyMemberController(this, findViewById(R.id._familyItem));
-        List<FamilyMemberViewModel> service = components.addData();
-        components.updateList(service);
+        controller = new FamilyMemberController(this, findViewById(R.id._familyItem));
+        List<FamilyMemberViewModel> service = controller.addData();
+        controller.updateList(service);
+        
+
+        int delte_user = 2;
+
+        controller.deleteUser(delte_user);
 
     }
 }

@@ -6,13 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C4C4C4"
-    tools:context=".ui.content.emergency.ui.EmergencyView">
+    tools:context=".ui.content.settings.SettingsView">
 
-    <ImageView
-        android:src="@drawable/barangay_image"
-        android:layout_width="500dp"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"/>
+
 
     <LinearLayout
         android:id="@+id/top"
@@ -40,7 +36,7 @@
 
         <!-- Centered Breaking News Text -->
         <TextView
-            android:text="Emergency"
+            android:text="My QR Code"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -66,30 +62,48 @@
 
     </LinearLayout>
 
-    <EditText
-        android:elevation="10dp"
-        android:layout_marginTop="20dp"
-        android:textColor="#666161"
-        android:padding="15dp"
-        android:textSize="15sp"
-        android:hint="Search"
-        android:drawableEnd="@drawable/baseline_search_24"
-        android:layout_below="@+id/top"
-        android:background="@drawable/login_field_bg"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/_search"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:ems="10"/>
+    <RelativeLayout
+        android:layout_centerVertical="true"
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_below="@+id/_search"
-        android:id="@+id/_emergencyItem"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_width="350dp"
-        android:layout_height="match_parent"/>
 
+        <RelativeLayout
+
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:background="@drawable/white_bg"
+                android:id="@+id/idIVQrcode"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_weight="1"
+                android:contentDescription="QR Code" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <TextView
+
+        android:id="@+id/QrCodeBtn"
+        android:background="@drawable/login_btn_bg"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:text="Generate QR code "
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="300dp"
+        android:layout_marginBottom="150dp"
+        android:layout_height="40dp">
+    </TextView>
 
 
     <include
@@ -97,5 +111,6 @@
         android:id="@+id/buttom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
 
 </RelativeLayout>
